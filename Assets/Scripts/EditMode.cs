@@ -15,9 +15,6 @@ public class EditMode : MonoBehaviour
 
     public int rayLength = 10;
 
-    private Coroutine holdButtonCoroutine = null;
-    private float holdButtonTime = 2f;
-
     private void Awake()
     {
 

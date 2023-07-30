@@ -30,12 +30,20 @@ public class ChangeMenus : MonoBehaviour
 
         else if (OVRInput.GetDown(OVRInput.Button.Two))
         {
-            mainMenu.SetActive(true);
             editMenu.SetActive(false);
             musicControls.SetActive(false);
-             environmentMenu.SetActive(false);
+            environmentMenu.SetActive(false);
+
+            if (musicControls.activeSelf)
+            {
+                mainMenu.SetActive(false);
+            }
+            else
+            {
+                mainMenu.SetActive(true);
+            }
         }
-        
+
         else if (OVRInput.GetDown(OVRInput.Button.Start))
         {
             mainMenu.SetActive(false);
