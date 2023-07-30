@@ -13,7 +13,6 @@ public class MusicControls : MonoBehaviour
     private float currentTime;
     public bool nowPlaying = false;
     private AudioSource activeAudiosource;
-    private bool timeout = false;
 
     private void Start()
     {
@@ -33,20 +32,19 @@ public class MusicControls : MonoBehaviour
         {
             RewindAudio();
         }
-
+        
         if (OVRInput.GetDown(OVRInput.Button.Four))
         {
             // SkipAudio();
         }
-        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x < -0.5f && !timeout)
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick))
         {
-            StartCoroutine(SeekTenSeconds(true));
+            SeekTenSeconds(true);
         }
-        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x > 0.5f && !timeout)
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick))
         {
-            StartCoroutine(SeekTenSeconds(false));
+            SeekTenSeconds(false);
         }
-
 
         UpdateMetadata();
     }
@@ -112,6 +110,7 @@ public class MusicControls : MonoBehaviour
             AudioSource audioSource = speaker.GetComponent<AudioSource>();
             if (audioSource != null)
             {
+                // Add conditional for rewind or last track
                 // audioSource.clip = clip;
                 audioSource.time = 0f;
             }
@@ -133,11 +132,9 @@ public class MusicControls : MonoBehaviour
             newSpeaker.Play();
         }
     }
-
-    private IEnumerator SeekTenSeconds(bool reverse)
+    
+    void SeekTenSeconds(bool reverse)
     {
-        timeout = true;
-
         GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
 
         foreach (GameObject speaker in speakers)
@@ -158,8 +155,5 @@ public class MusicControls : MonoBehaviour
                 }
             }
         }
-
-        yield return new WaitForSeconds(1f);
-        timeout = false;
     }
 }
