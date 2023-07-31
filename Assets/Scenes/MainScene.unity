@@ -4145,7 +4145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicControls: {fileID: 842628804}
   editMenu: {fileID: 876086684}
-  prefabToSpawn: {fileID: 1265651083546979984, guid: e268d758a5046a74caff0b4d6ffb5f05, type: 3}
+  prefabToSpawn: {fileID: 1265651083546979984, guid: 0fc8b62272941684497a0ba0550ea50c, type: 3}
   temporaryMat: {fileID: 2100000, guid: a68efed2938513748b16802d7cacb014, type: 2}
   rayLength: 10
 --- !u!1 &269652586
@@ -13608,13 +13608,14 @@ GameObject:
   - component: {fileID: 842628803}
   - component: {fileID: 842628802}
   - component: {fileID: 842628801}
+  - component: {fileID: 842628805}
   m_Layer: 0
   m_Name: Music Controls Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &842628800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13713,6 +13714,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 59c5765557dda9543bcae1652104fbb2, type: 3}
   errorText: {fileID: 1812722422}
   songTimeText: {fileID: 1146643568}
+  songTitleText: {fileID: 2143491350}
   nowPlaying: 0
   playButton: {fileID: 1390531996}
   rewindButton: {fileID: 813248430}
@@ -13721,6 +13723,26 @@ MonoBehaviour:
   seekForwardButton: {fileID: 1065369363}
   playButtonImage: {fileID: 21300000, guid: ef201c64032602040b3bbdcdda944ddf, type: 3}
   pauseButtonImage: {fileID: 21300000, guid: 9e23aa82ae06628428653171cc6a75c4, type: 3}
+--- !u!95 &842628805
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842628799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a17d44b9dadab634fa928f028527d242, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &854020657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13809,6 +13831,7 @@ GameObject:
   - component: {fileID: 876086688}
   - component: {fileID: 876086687}
   - component: {fileID: 876086686}
+  - component: {fileID: 876086689}
   m_Layer: 0
   m_Name: Edit Menu
   m_TagString: Untagged
@@ -13899,6 +13922,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &876086689
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876086684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a17d44b9dadab634fa928f028527d242, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &876717160
 GameObject:
   m_ObjectHideFlags: 0
@@ -18297,6 +18340,7 @@ GameObject:
   - component: {fileID: 1124339774}
   - component: {fileID: 1124339773}
   - component: {fileID: 1124339772}
+  - component: {fileID: 1124339775}
   m_Layer: 0
   m_Name: Environments Menu
   m_TagString: Untagged
@@ -18387,6 +18431,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1124339775
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124339770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a17d44b9dadab634fa928f028527d242, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1124342615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21790,13 +21854,14 @@ GameObject:
   - component: {fileID: 1406936365}
   - component: {fileID: 1406936364}
   - component: {fileID: 1406936363}
+  - component: {fileID: 1406936366}
   m_Layer: 0
   m_Name: Intro Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1406936362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21880,6 +21945,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1406936366
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406936361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a17d44b9dadab634fa928f028527d242, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1407056874
 PrefabInstance:
   m_ObjectHideFlags: 0

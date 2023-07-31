@@ -10,6 +10,8 @@ public class ChangeMenus : MonoBehaviour
     public GameObject musicControls;
     public GameObject environmentMenu;
 
+    private Animator anim;
+
     private void Start()
     {
         mainMenu.SetActive(true);
@@ -22,41 +24,58 @@ public class ChangeMenus : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.Button.Four) && mainMenu.activeSelf)
         {
-             mainMenu.SetActive(false);
-             editMenu.SetActive(true);
-             musicControls.SetActive(false);
-             environmentMenu.SetActive(false);
+            StartCoroutine(SetMenuActive(mainMenu, false));
+            StartCoroutine(SetMenuActive(editMenu, true));
+            StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(environmentMenu, false));
         }
 
         else if (OVRInput.GetDown(OVRInput.Button.Two))
         {
-            editMenu.SetActive(false);
-            musicControls.SetActive(false);
-            environmentMenu.SetActive(false);
+            StartCoroutine(SetMenuActive(editMenu, false));
+            StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(environmentMenu, false));
 
-            if (musicControls.activeSelf)
+            if (mainMenu.activeSelf)
             {
-                mainMenu.SetActive(false);
+                StartCoroutine(SetMenuActive(mainMenu, false));
             }
             else
             {
-                mainMenu.SetActive(true);
+                StartCoroutine(SetMenuActive(mainMenu, true));
             }
         }
 
         else if (OVRInput.GetDown(OVRInput.Button.Start))
         {
-            mainMenu.SetActive(false);
-            editMenu.SetActive(false);
-            musicControls.SetActive(true);
-            environmentMenu.SetActive(false);
+            StartCoroutine(SetMenuActive(mainMenu, false));
+            StartCoroutine(SetMenuActive(editMenu, false));
+            StartCoroutine(SetMenuActive(musicControls, true));
+            StartCoroutine(SetMenuActive(environmentMenu, false));
+
         }
         
         else if (OVRInput.GetDown(OVRInput.Button.Three) && mainMenu.activeSelf) {
-            mainMenu.SetActive(false);
-            editMenu.SetActive(false);
-            musicControls.SetActive(false);
-            environmentMenu.SetActive(true);
+            StartCoroutine(SetMenuActive(mainMenu, false));
+            StartCoroutine(SetMenuActive(editMenu, false));
+            StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(environmentMenu, true));
+        }
+    }
+
+    private IEnumerator SetMenuActive(GameObject menu, bool active)
+    {
+        if (active) {
+            menu.SetActive(true);
+            anim = menu.GetComponent<Animator>();
+            anim.Play("Base Layer.Growing");
+        }
+
+        else {
+            anim = menu.GetComponent<Animator>();
+            anim.Play("Base Layer.Shrinking");
+            yield return new WaitForSeconds(0.2f);
+            menu.SetActive(false);
         }
     }
 }

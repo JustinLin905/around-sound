@@ -64,6 +64,7 @@ public class EditMode : MonoBehaviour
                 Destroy(speaker);
             }
 
+            musicControls.PushButton(musicControls.playButton);\
             musicControls.nowPlaying = false;
         }
     }

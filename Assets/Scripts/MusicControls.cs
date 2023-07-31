@@ -9,6 +9,7 @@ public class MusicControls : MonoBehaviour
 
     public GameObject errorText;
     public TextMeshProUGUI songTimeText;
+    public TextMeshProUGUI songTitleText;
 
     private AudioClip currentSong;
     private float currentTime;
@@ -150,6 +151,7 @@ public class MusicControls : MonoBehaviour
             string totalSeconds = Mathf.Floor(totalTime % 60).ToString("00");
 
             songTimeText.text = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
+            songTitleText.text = activeAudiosource.clip.name;
         }
     }
 
@@ -215,5 +217,10 @@ public class MusicControls : MonoBehaviour
         buttonImage.CrossFadeAlpha(0.1f, 0, true);
         yield return new WaitForSeconds(0.1f);
         buttonImage.CrossFadeAlpha(1f, 1f, true);
+    }
+
+    public void PushButton(Image buttonImage) 
+    {
+        StartCoroutine(PushButtonVisual(buttonImage));
     }
 }

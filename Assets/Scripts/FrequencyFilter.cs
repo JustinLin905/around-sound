@@ -15,11 +15,11 @@ public class FrequencyFilter : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         // Add a low pass filter and set the cutoff frequency to 250 Hz
-        // lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        // lowPassFilter.cutoffFrequency = highCutoff;
+        lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        lowPassFilter.cutoffFrequency = highCutoff;
 
         // Add a high pass filter and set the cutoff frequency to 60 Hz
-        // highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
-        // highPassFilter.cutoffFrequency = lowCutoff;
+        highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
+        highPassFilter.cutoffFrequency = lowCutoff;
     }
 }
