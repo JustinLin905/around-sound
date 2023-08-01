@@ -10,14 +10,26 @@ public class EditMode : MonoBehaviour
     public MusicControls musicControls;
     
     public GameObject editMenu;
-    public GameObject prefabToSpawn;
     public Material temporaryMat;
+
+    public GameObject prefabToSpawn;
+
+    public GameObject speakerTower;
+    public GameObject subwoofer;
+    public GameObject midrange;
+    public GameObject tweeter;
+    private GameObject[] speakerTypes;
+    public GameObject[] selectedBGs;
 
     public int rayLength = 10;
 
-    private void Awake()
-    {
+    private int speakerIndex = 0;
+    private bool timeout = false;
 
+    private void Start()
+    {
+        prefabToSpawn = speakerTower;
+        speakerTypes = new GameObject[] {speakerTower, subwoofer, midrange, tweeter};
     }
 
     void Update()
@@ -64,8 +76,58 @@ public class EditMode : MonoBehaviour
                 Destroy(speaker);
             }
 
-            musicControls.PushButton(musicControls.playButton);\
+            musicControls.PushButton(musicControls.playButton);
             musicControls.nowPlaying = false;
         }
+
+        // Choose speaker type
+        if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y > 0.5f && !timeout)
+        {
+            SwapSpeakerType(false);
+        }
+        else if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y < -0.5f && !timeout)
+        {
+            SwapSpeakerType(true);
+        }
+    }
+
+    void SwapSpeakerType(bool down)
+    {
+        StartCoroutine(SetTimeout());
+
+        if (down)
+        {
+            speakerIndex++;
+            if (speakerIndex >= speakerTypes.Length)
+            {
+                speakerIndex = 0;
+            }
+        }
+        else
+        {
+            speakerIndex--;
+            if (speakerIndex < 0)
+            {
+                speakerIndex = speakerTypes.Length - 1;
+            }
+        }
+
+        prefabToSpawn = speakerTypes[speakerIndex];
+        selectedBGs[speakerIndex].SetActive(true);
+
+        for (int i = 0; i < speakerTypes.Length; i++)
+        {
+            if (i != speakerIndex)
+            {
+                selectedBGs[i].SetActive(false);
+            }
+        }
+    }
+
+    IEnumerator SetTimeout()
+    {
+        timeout = true;
+        yield return new WaitForSeconds(0.5f);
+        timeout = false;
     }
 }
