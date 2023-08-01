@@ -127,7 +127,7 @@ public class EditMode : MonoBehaviour
     IEnumerator SetTimeout()
     {
         timeout = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.15f);
         timeout = false;
     }
 }

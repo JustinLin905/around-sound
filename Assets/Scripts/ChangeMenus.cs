@@ -74,7 +74,7 @@ public class ChangeMenus : MonoBehaviour
         else {
             anim = menu.GetComponent<Animator>();
             anim.Play("Base Layer.Shrinking");
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.3f);
             menu.SetActive(false);
         }
     }
