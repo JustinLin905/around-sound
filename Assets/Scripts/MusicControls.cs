@@ -6,6 +6,7 @@ using System.Collections;
 public class MusicControls : MonoBehaviour
 {
     public AudioClip clip; // The AudioClip you want to play
+    public GameObject musicControlsMenu;
 
     public GameObject errorText;
     public TextMeshProUGUI songTimeText;
@@ -40,6 +41,8 @@ public class MusicControls : MonoBehaviour
 
     private void Update()
     {
+        if (!musicControlsMenu.activeSelf) return;
+
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
             PlayAudio();

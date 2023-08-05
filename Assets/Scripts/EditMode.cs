@@ -86,9 +86,18 @@ public class EditMode : MonoBehaviour
                 directionToTarget.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
                 ghostSpeakerTypes[speakerIndex].transform.rotation = targetRotation;
-            }
 
-            editRay.SetActive(true);
+                // Disable other ghost speakers
+                for (int i = 0; i < ghostSpeakerTypes.Length; i++)
+                {
+                    if (i != speakerIndex)
+                    {
+                        ghostSpeakerTypes[i].SetActive(false);
+                    }
+                }
+
+                editRay.SetActive(true);
+            }
         }
 
         else if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
@@ -108,7 +117,12 @@ public class EditMode : MonoBehaviour
             }
 
             editRay.SetActive(false);
-            ghostSpeakerTypes[speakerIndex].SetActive(false);
+            
+            // Disable all ghost speakers
+            for (int i = 0; i < ghostSpeakerTypes.Length; i++)
+            {
+                ghostSpeakerTypes[i].SetActive(false);
+            }
         }
 
         if (OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
@@ -119,8 +133,9 @@ public class EditMode : MonoBehaviour
                 Destroy(speaker);
             }
 
-            musicControls.PushButton(musicControls.playButton);
+            // Bugged because music controls is inactive
             musicControls.nowPlaying = false;
+            musicControls.PushButton(musicControls.playButton);
         }
 
         // Choose speaker type
