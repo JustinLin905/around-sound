@@ -83,6 +83,7 @@ public class EditMode : MonoBehaviour
                 ghostSpeakerTypes[speakerIndex].transform.position = hit.point;
 
                 Vector3 directionToTarget = transform.position - hit.point;
+                directionToTarget.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
                 ghostSpeakerTypes[speakerIndex].transform.rotation = targetRotation;
             }
@@ -99,9 +100,10 @@ public class EditMode : MonoBehaviour
 
                 // Correct rotation
                 Vector3 directionToTarget = transform.position - hit.point;
+                directionToTarget.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
                 newObj.transform.rotation = targetRotation;
-                
+
                 musicControls.CatchUpNewSpeaker(newObj.GetComponent<AudioSource>());
             }
 
