@@ -1809,6 +1809,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 481164, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 326094160}
+    - targetCorrespondingSourceObject: {fileID: 481164, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1900789109}
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!4 &111283365 stripped
 Transform:
@@ -4396,12 +4399,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicControls: {fileID: 842628804}
   editMenu: {fileID: 876086684}
-  temporaryMat: {fileID: 2100000, guid: a68efed2938513748b16802d7cacb014, type: 2}
+  editRay: {fileID: 1900789108}
   prefabToSpawn: {fileID: 1265651083546979984, guid: 0fc8b62272941684497a0ba0550ea50c, type: 3}
   speakerTower: {fileID: 1265651083546979984, guid: e268d758a5046a74caff0b4d6ffb5f05, type: 3}
   subwoofer: {fileID: 1265651083546979984, guid: 0fc8b62272941684497a0ba0550ea50c, type: 3}
   midrange: {fileID: 1265651083546979984, guid: 1bc8e5e2ff724f34e8dbbb54d7b4a3bc, type: 3}
   tweeter: {fileID: 1265651083546979984, guid: eb006c70cf281ed4ab8e13201d6acb88, type: 3}
+  ghostSpeakerTower: {fileID: 1265651083546979984, guid: d128f409ea81e3047bec0fb5ca947d74, type: 3}
+  ghostSubwoofer: {fileID: 1265651083546979984, guid: a6d9ecb144205e144a2961aa48881f7e, type: 3}
+  ghostMidrange: {fileID: 1265651083546979984, guid: c584f1c4163e2f94dba8382443e5fd6b, type: 3}
+  ghostTweeter: {fileID: 1265651083546979984, guid: ac8a5f397bcb72040916cc6a90358b36, type: 3}
   selectedBGs:
   - {fileID: 753441141}
   - {fileID: 492776523}
@@ -21101,7 +21108,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Soundscape!
+  m_text: Welcome to <b>around sound</b>!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31861,6 +31868,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892898972}
   m_Mesh: {fileID: 4300012, guid: 8537129dc3fbbe44186add4eea186b85, type: 3}
+--- !u!1 &1900789108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900789109}
+  - component: {fileID: 1900789111}
+  - component: {fileID: 1900789110}
+  m_Layer: 0
+  m_Name: Edit Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1900789109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900789108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250696432}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1900789110
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900789108}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a68efed2938513748b16802d7cacb014, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1900789111
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900789108}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1903556982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32744,12 +32834,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicControls: {fileID: 0}
   editMenu: {fileID: 1536930978}
-  temporaryMat: {fileID: 0}
+  editRay: {fileID: 0}
   prefabToSpawn: {fileID: 1265651083546979984, guid: e268d758a5046a74caff0b4d6ffb5f05, type: 3}
   speakerTower: {fileID: 0}
   subwoofer: {fileID: 0}
   midrange: {fileID: 0}
   tweeter: {fileID: 0}
+  ghostSpeakerTower: {fileID: 0}
+  ghostSubwoofer: {fileID: 0}
+  ghostMidrange: {fileID: 0}
+  ghostTweeter: {fileID: 0}
   selectedBGs: []
   rayLength: 10
 --- !u!1 &1935792849

@@ -10,15 +10,22 @@ public class EditMode : MonoBehaviour
     public MusicControls musicControls;
     
     public GameObject editMenu;
-    public Material temporaryMat;
 
+    public GameObject editRay;
     public GameObject prefabToSpawn;
 
     public GameObject speakerTower;
     public GameObject subwoofer;
     public GameObject midrange;
     public GameObject tweeter;
+
+    public GameObject ghostSpeakerTower;
+    public GameObject ghostSubwoofer;
+    public GameObject ghostMidrange;
+    public GameObject ghostTweeter;
+
     private GameObject[] speakerTypes;
+    private GameObject[] ghostSpeakerTypes;
     public GameObject[] selectedBGs;
 
     public int rayLength = 10;
@@ -28,8 +35,18 @@ public class EditMode : MonoBehaviour
 
     private void Start()
     {
+        editRay.SetActive(false);
         prefabToSpawn = speakerTower;
         speakerTypes = new GameObject[] {speakerTower, subwoofer, midrange, tweeter};
+        ghostSpeakerTypes = new GameObject[] { ghostSpeakerTower, ghostSubwoofer, ghostMidrange, ghostTweeter };
+
+        for (int i = 0; i < speakerTypes.Length; i++)
+        {
+            if (i != speakerIndex)
+            {
+                selectedBGs[i].SetActive(false);
+            }
+        }
     }
 
     void Update()
@@ -42,30 +59,38 @@ public class EditMode : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength * 10))
             {
-                // Draw ray and temporary speaker
-                GameObject temporaryRay = new GameObject();
-                temporaryRay.transform.position = transform.position;
-                temporaryRay.AddComponent<LineRenderer>();
-                LineRenderer lr = temporaryRay.GetComponent<LineRenderer>();
-                lr.startWidth = 0.01f;
-                lr.endWidth = 0.01f;
-                lr.SetPosition(0, temporaryRay.transform.position);
-                lr.SetPosition(1, hit.point);
-                lr.material = temporaryMat;
-                
-                GameObject.Destroy(temporaryRay, 0.05f);
+                //// Draw ray and temporary speaker
+                //GameObject temporaryRay = new GameObject();
+                //temporaryRay.transform.position = transform.position;
+                //temporaryRay.AddComponent<LineRenderer>();
+                //LineRenderer lr = temporaryRay.GetComponent<LineRenderer>();
+                //lr.startWidth = 0.01f;
+                //lr.endWidth = 0.01f;
+                //lr.SetPosition(0, temporaryRay.transform.position);
+                //lr.SetPosition(1, hit.point);
+                //lr.material = temporaryMat;
+
+                //GameObject.Destroy(temporaryRay, 0.05f);
                 // GameObject.Destroy(temporarySpeaker, 0.05f);
+
+                // Create ghost speaker
+                GameObject ghostSpeaker = Instantiate(ghostSpeakerTypes[speakerIndex], hit.point, Quaternion.identity);
+                GameObject.Destroy(ghostSpeaker, 0.05f);
             }
+
+            editRay.SetActive(true);
         }
-        
+
         else if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength * 10))
             {
                 // Spawn speaker
-                GameObject newObj = Instantiate(prefabToSpawn, hit.point, Quaternion.identity);
+                GameObject newObj = Instantiate(speakerTypes[speakerIndex], hit.point, Quaternion.identity);
                 musicControls.CatchUpNewSpeaker(newObj.GetComponent<AudioSource>());
             }
+
+            editRay.SetActive(false);
         }
 
         if (OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
@@ -112,7 +137,7 @@ public class EditMode : MonoBehaviour
             }
         }
 
-        prefabToSpawn = speakerTypes[speakerIndex];
+        // prefabToSpawn = speakerTypes[speakerIndex];
         selectedBGs[speakerIndex].SetActive(true);
 
         for (int i = 0; i < speakerTypes.Length; i++)
