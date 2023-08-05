@@ -47,6 +47,11 @@ public class EditMode : MonoBehaviour
                 selectedBGs[i].SetActive(false);
             }
         }
+
+        for (int i = 0; i < ghostSpeakerTypes.Length; i++)
+        {
+            ghostSpeakerTypes[i].SetActive(false);
+        }
     }
 
     void Update()
@@ -74,8 +79,12 @@ public class EditMode : MonoBehaviour
                 // GameObject.Destroy(temporarySpeaker, 0.05f);
 
                 // Create ghost speaker
-                GameObject ghostSpeaker = Instantiate(ghostSpeakerTypes[speakerIndex], hit.point, Quaternion.identity);
-                GameObject.Destroy(ghostSpeaker, 0.05f);
+                ghostSpeakerTypes[speakerIndex].SetActive(true);
+                ghostSpeakerTypes[speakerIndex].transform.position = hit.point;
+
+                Vector3 directionToTarget = transform.position - hit.point;
+                Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+                ghostSpeakerTypes[speakerIndex].transform.rotation = targetRotation;
             }
 
             editRay.SetActive(true);
@@ -87,10 +96,17 @@ public class EditMode : MonoBehaviour
             {
                 // Spawn speaker
                 GameObject newObj = Instantiate(speakerTypes[speakerIndex], hit.point, Quaternion.identity);
+
+                // Correct rotation
+                Vector3 directionToTarget = transform.position - hit.point;
+                Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+                newObj.transform.rotation = targetRotation;
+                
                 musicControls.CatchUpNewSpeaker(newObj.GetComponent<AudioSource>());
             }
 
             editRay.SetActive(false);
+            ghostSpeakerTypes[speakerIndex].SetActive(false);
         }
 
         if (OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
