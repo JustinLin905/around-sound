@@ -8,7 +8,9 @@ public class ChangeMenus : MonoBehaviour
     public GameObject mainMenu;
     public GameObject editMenu;
     public GameObject musicControls;
+    public GameObject musicQueue;
     public GameObject environmentMenu;
+
 
     private Animator anim;
 
@@ -17,6 +19,7 @@ public class ChangeMenus : MonoBehaviour
         mainMenu.SetActive(true);
         editMenu.SetActive(false);
         musicControls.SetActive(false);
+        musicQueue.SetActive(false);
         environmentMenu.SetActive(false);
     }
     
@@ -27,6 +30,7 @@ public class ChangeMenus : MonoBehaviour
             StartCoroutine(SetMenuActive(mainMenu, false));
             StartCoroutine(SetMenuActive(editMenu, true));
             StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(musicQueue, false));
             StartCoroutine(SetMenuActive(environmentMenu, false));
         }
 
@@ -34,6 +38,7 @@ public class ChangeMenus : MonoBehaviour
         {
             StartCoroutine(SetMenuActive(editMenu, false));
             StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(musicQueue, false));
             StartCoroutine(SetMenuActive(environmentMenu, false));
 
             if (mainMenu.activeSelf)
@@ -51,6 +56,7 @@ public class ChangeMenus : MonoBehaviour
             StartCoroutine(SetMenuActive(mainMenu, false));
             StartCoroutine(SetMenuActive(editMenu, false));
             StartCoroutine(SetMenuActive(musicControls, true));
+            StartCoroutine(SetMenuActive(musicQueue, true));
             StartCoroutine(SetMenuActive(environmentMenu, false));
 
         }
@@ -59,6 +65,7 @@ public class ChangeMenus : MonoBehaviour
             StartCoroutine(SetMenuActive(mainMenu, false));
             StartCoroutine(SetMenuActive(editMenu, false));
             StartCoroutine(SetMenuActive(musicControls, false));
+            StartCoroutine(SetMenuActive(musicQueue, false));
             StartCoroutine(SetMenuActive(environmentMenu, true));
         }
     }
