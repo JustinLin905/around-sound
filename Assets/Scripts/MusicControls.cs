@@ -57,11 +57,11 @@ public class MusicControls : MonoBehaviour
         {
             // SkipAudio();
         }
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             SeekTenSeconds(true);
         }
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick))
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
             SeekTenSeconds(false);
         }
