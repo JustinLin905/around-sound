@@ -16281,6 +16281,7 @@ GameObject:
   - component: {fileID: 994262753}
   - component: {fileID: 994262756}
   - component: {fileID: 994262757}
+  - component: {fileID: 994262758}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -16378,6 +16379,18 @@ MonoBehaviour:
   seekForwardButton: {fileID: 1065369363}
   playButtonImage: {fileID: 21300000, guid: ef201c64032602040b3bbdcdda944ddf, type: 3}
   pauseButtonImage: {fileID: 21300000, guid: 9e23aa82ae06628428653171cc6a75c4, type: 3}
+--- !u!114 &994262758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994262752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398b052ae6a1a9441b954a674c5bb33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &994756977
 GameObject:
   m_ObjectHideFlags: 0
