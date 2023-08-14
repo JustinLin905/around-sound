@@ -13,6 +13,7 @@ public class MusicControls : MonoBehaviour
     public GameObject errorText;
     public TextMeshProUGUI songTimeText;
     public TextMeshProUGUI songTitleText;
+    public TextMeshProUGUI queueText;
 
     private float currentTime;
     public bool nowPlaying;
@@ -49,7 +50,7 @@ public class MusicControls : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            PlayAudio();
+            PlayPause();
         }
 
         if (OVRInput.GetDown(OVRInput.Button.Three))
@@ -57,7 +58,7 @@ public class MusicControls : MonoBehaviour
             RewindAudio();
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.Four))
+        if (OVRInput.GetDown(OVRInput.Button.Four) || activeAudiosource.time >= activeAudiosource.clip.length)
         {
             SkipAudio();
         }
@@ -73,7 +74,7 @@ public class MusicControls : MonoBehaviour
         UpdateMetadata();
     }
 
-    void PlayAudio()
+    void PlayPause()
     {
         // Find all GameObjects with the tag "Speakers"
         GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
@@ -127,6 +128,20 @@ public class MusicControls : MonoBehaviour
 
     void RewindAudio()
     {
+        if (activeAudiosource != null && activeAudiosource.time < 2f)
+        {
+            currentSongIndex--;
+
+            if (currentSongIndex < 0)
+            {
+                currentSongIndex = queue.Count - 1;
+            }
+
+            // Set the new song
+            currentSong = queue[currentSongIndex];
+            clip = currentSong.clip;
+        }
+
         GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
 
         foreach (GameObject speaker in speakers)
@@ -134,35 +149,16 @@ public class MusicControls : MonoBehaviour
             AudioSource audioSource = speaker.GetComponent<AudioSource>();
             if (audioSource != null)
             {
-                // Add conditional for rewind or last track
-                if (audioSource.time < 2f)
-                {
-                    currentSongIndex--;
-
-                    if (currentSongIndex < 0)
-                    {
-                        currentSongIndex = queue.Count - 1;
-                    }
-
-                    // Play the new song
-                    currentSong = queue[currentSongIndex];
-                    clip = currentSong.clip;
-
-                    audioSource.clip = clip;
-                    audioSource.time = 0f;
-                    audioSource.Play();
-                    activeAudiosource = audioSource;
-
-                    playButton.sprite = pauseButtonImage;
-                }
-                else
-                {
-                    audioSource.time = 0f;
-                }
+                audioSource.clip = clip;
+                audioSource.time = 0f;
+                audioSource.Play();
+                activeAudiosource = audioSource;
             }
         }
 
         StartCoroutine(PushButtonVisual(rewindButton));
+        playButton.sprite = pauseButtonImage;
+        nowPlaying = true;
     }
 
     void SkipAudio()
@@ -193,6 +189,7 @@ public class MusicControls : MonoBehaviour
 
         StartCoroutine(PushButtonVisual(forwardButton));
         playButton.sprite = pauseButtonImage;
+        nowPlaying = true;
     }
 
     void UpdateMetadata()
@@ -210,7 +207,16 @@ public class MusicControls : MonoBehaviour
             string totalSeconds = Mathf.Floor(totalTime % 60).ToString("00");
 
             songTimeText.text = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
-            songTitleText.text = currentSong.name;
+
+            // Truncate song name if it's too long
+            if (currentSong.name.Length > 30)
+            {
+                songTitleText.text = currentSong.name.Substring(0, 30) + "...";
+            }
+            else
+            {
+                songTitleText.text = currentSong.name;
+            }
         }
     }
 
@@ -266,6 +272,14 @@ public class MusicControls : MonoBehaviour
         // Set the default track
         queue.Insert(0, new Song("One Kiss (Calvis Harris)", clip));
         currentSong = queue[currentSongIndex];
+
+        // Make queueText display name of all songs in audioClips (temporary)
+        string queueString = "";
+        foreach (Song clip in queue)
+        {
+            queueString += clip.name + "\n";
+        }
+        queueText.text = queueString;
     }
 
     IEnumerator PushButtonVisual(Image buttonImage)
@@ -285,10 +299,5 @@ public class MusicControls : MonoBehaviour
         buttonImage.CrossFadeAlpha(0.1f, 0, true);
         yield return new WaitForSeconds(0.1f);
         buttonImage.CrossFadeAlpha(1f, 1f, true);
-    }
-
-    public void PushButton(Image buttonImage) 
-    {
-        StartCoroutine(PushButtonVisual(buttonImage));
     }
 }

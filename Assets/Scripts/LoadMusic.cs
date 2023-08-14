@@ -23,7 +23,7 @@ public class LoadMusic : MonoBehaviour
 {
     private string folderName;
     private string folderPath;
-    public TextMeshProUGUI queueText;
+    public TextMeshProUGUI errorLoadingText;
 
     private List<Song> queue = new List<Song>();
     public MusicControls musicControls;
@@ -39,6 +39,8 @@ public class LoadMusic : MonoBehaviour
             Directory.CreateDirectory(folderPath);
         }
 
+        errorLoadingText.gameObject.SetActive(false);
+
         StartCoroutine(InitializeAudioFiles());
     }
 
@@ -51,14 +53,6 @@ public class LoadMusic : MonoBehaviour
     private IEnumerator InitializeAudioFiles()
     {
         yield return LoadAllAudioFiles();
-
-        // Make queueText display name of all songs in audioClips (temporary)
-        string queueString = "";
-        foreach (Song clip in queue)
-        {
-            queueString += clip.name + "\n";
-        }
-        queueText.text = queueString;
 
         // Transfer queue to MusicControls
         musicControls.SetQueue(queue);
@@ -102,6 +96,7 @@ public class LoadMusic : MonoBehaviour
             else
             {
                 Debug.LogError(www.error);
+                errorLoadingText.gameObject.SetActive(true);
             }
         }
     }

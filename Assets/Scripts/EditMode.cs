@@ -135,7 +135,7 @@ public class EditMode : MonoBehaviour
 
             // Bugged because music controls is inactive
             musicControls.nowPlaying = false;
-            musicControls.PushButton(musicControls.playButton);
+            musicControls.playButton.sprite = musicControls.playButtonImage;
         }
 
         // Choose speaker type
