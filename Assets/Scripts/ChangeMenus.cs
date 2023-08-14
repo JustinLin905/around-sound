@@ -11,7 +11,6 @@ public class ChangeMenus : MonoBehaviour
     public GameObject musicQueue;
     public GameObject environmentMenu;
 
-
     private Animator anim;
 
     private void Start()

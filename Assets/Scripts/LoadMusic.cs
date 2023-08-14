@@ -25,7 +25,8 @@ public class LoadMusic : MonoBehaviour
     private string folderPath;
     public TextMeshProUGUI queueText;
 
-    public List<Song> queue = new List<Song>();
+    private List<Song> queue = new List<Song>();
+    public MusicControls musicControls;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +59,9 @@ public class LoadMusic : MonoBehaviour
             queueString += clip.name + "\n";
         }
         queueText.text = queueString;
+
+        // Transfer queue to MusicControls
+        musicControls.SetQueue(queue);
     }
 
     private IEnumerator LoadAllAudioFiles()
@@ -85,7 +89,7 @@ public class LoadMusic : MonoBehaviour
     {
         string url = "file://" + filePath;
         using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, GetAudioType(filePath)))
-        {
+    {
             yield return www.SendWebRequest();
 
             if (www.result == UnityWebRequest.Result.Success)

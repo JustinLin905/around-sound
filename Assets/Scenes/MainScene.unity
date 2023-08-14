@@ -16421,6 +16421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   queueText: {fileID: 2134233601}
+  musicControls: {fileID: 994262757}
 --- !u!1 &994756977
 GameObject:
   m_ObjectHideFlags: 0

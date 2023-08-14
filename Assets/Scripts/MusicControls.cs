@@ -2,17 +2,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MusicControls : MonoBehaviour
 {
     public AudioClip clip; // The AudioClip you want to play
+    private Song currentSong;
     public GameObject musicControlsMenu;
 
     public GameObject errorText;
     public TextMeshProUGUI songTimeText;
     public TextMeshProUGUI songTitleText;
 
-    private AudioClip currentSong;
     private float currentTime;
     public bool nowPlaying;
     private AudioSource activeAudiosource;
@@ -26,10 +27,13 @@ public class MusicControls : MonoBehaviour
     public Sprite playButtonImage;
     public Sprite pauseButtonImage;
 
+    // For music queue
+    private List<Song> queue = new List<Song>();
+    private int currentSongIndex = 0;
+
     private void Start()
     {
         errorText.SetActive(false);
-        currentSong = clip;
         currentTime = 0f;
         nowPlaying = false;
     }
@@ -55,7 +59,7 @@ public class MusicControls : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.Four))
         {
-            // SkipAudio();
+            SkipAudio();
         }
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
@@ -106,11 +110,10 @@ public class MusicControls : MonoBehaviour
                 if (audioSource != null)
                 {
                     // Assign the clip to the AudioSource and play it
-                    audioSource.clip = clip;
+                    audioSource.clip = currentSong.clip;
                     if (activeAudiosource)
                     {
                         audioSource.time = activeAudiosource.time;
-
                     }
 
                     audioSource.Play();
@@ -132,20 +135,73 @@ public class MusicControls : MonoBehaviour
             if (audioSource != null)
             {
                 // Add conditional for rewind or last track
-                // audioSource.clip = clip;
-                audioSource.time = 0f;
+                if (audioSource.time < 2f)
+                {
+                    currentSongIndex--;
+
+                    if (currentSongIndex < 0)
+                    {
+                        currentSongIndex = queue.Count - 1;
+                    }
+
+                    // Play the new song
+                    currentSong = queue[currentSongIndex];
+                    clip = currentSong.clip;
+
+                    audioSource.clip = clip;
+                    audioSource.time = 0f;
+                    audioSource.Play();
+                    activeAudiosource = audioSource;
+
+                    playButton.sprite = pauseButtonImage;
+                }
+                else
+                {
+                    audioSource.time = 0f;
+                }
             }
         }
 
         StartCoroutine(PushButtonVisual(rewindButton));
     }
 
+    void SkipAudio()
+    {
+        currentSongIndex++;
+        if (currentSongIndex >= queue.Count)
+        {
+            currentSongIndex = 0;
+        }
+
+        currentSong = queue[currentSongIndex];
+        clip = currentSong.clip;
+
+        // Play the new song
+        GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
+
+        foreach (GameObject speaker in speakers)
+        {
+            AudioSource audioSource = speaker.GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                audioSource.clip = clip;
+                audioSource.time = 0f;
+                audioSource.Play();
+                activeAudiosource = audioSource;
+            }
+        }
+
+        StartCoroutine(PushButtonVisual(forwardButton));
+        playButton.sprite = pauseButtonImage;
+    }
+
     void UpdateMetadata()
     { 
+        // Second conditional may be unnecessary
         if (activeAudiosource != null && activeAudiosource.clip != null)
         {
             currentTime = activeAudiosource.time;
-            float totalTime = activeAudiosource.clip.length;
+            float totalTime = currentSong.clip.length;
 
             string currentMinutes = Mathf.Floor(currentTime / 60).ToString("00");
             string currentSeconds = Mathf.Floor(currentTime % 60).ToString("00");
@@ -154,7 +210,7 @@ public class MusicControls : MonoBehaviour
             string totalSeconds = Mathf.Floor(totalTime % 60).ToString("00");
 
             songTimeText.text = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
-            songTitleText.text = activeAudiosource.clip.name;
+            songTitleText.text = currentSong.name;
         }
     }
 
@@ -178,7 +234,7 @@ public class MusicControls : MonoBehaviour
             AudioSource audioSource = speaker.GetComponent<AudioSource>();
             if (audioSource != null)
             {
-                audioSource.clip = clip;
+                audioSource.clip = currentSong.clip;
 
                 if (reverse)
                 {
@@ -201,6 +257,15 @@ public class MusicControls : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetQueue(List<Song> newQueue)
+    {
+        queue = newQueue;
+
+        // Set the default track
+        queue.Insert(0, new Song("One Kiss (Calvis Harris)", clip));
+        currentSong = queue[currentSongIndex];
     }
 
     IEnumerator PushButtonVisual(Image buttonImage)
