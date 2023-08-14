@@ -7,6 +7,13 @@ public class PunchSpeaker : MonoBehaviour
     public AudioClip pop;
     private int controllersInside = 0;
 
+    private MusicControls musicControls;
+
+    private void Start()
+    {
+        musicControls = GameObject.Find("EventSystem").GetComponent<MusicControls>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Controller"))
@@ -32,6 +39,14 @@ public class PunchSpeaker : MonoBehaviour
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(pop);
         yield return new WaitForSeconds(0.1f);
+
+        // If this is the last speaker, pause music
+        if (GameObject.FindGameObjectsWithTag("Speakers").Length <= 1)
+        {
+            musicControls.nowPlaying = false;
+            musicControls.playButton.sprite = musicControls.playButtonImage;
+        }
+
         Destroy(gameObject);
     }
 }

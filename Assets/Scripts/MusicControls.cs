@@ -59,7 +59,7 @@ public class MusicControls : MonoBehaviour
             RewindAudio();
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.Four) || activeAudiosource.time >= activeAudiosource.clip.length)
+        if (OVRInput.GetDown(OVRInput.Button.Four) || (activeAudiosource != null && activeAudiosource.time >= activeAudiosource.clip.length))
         {
             SkipAudio();
         }

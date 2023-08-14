@@ -133,7 +133,6 @@ public class EditMode : MonoBehaviour
                 Destroy(speaker);
             }
 
-            // Bugged because music controls is inactive
             musicControls.nowPlaying = false;
             musicControls.playButton.sprite = musicControls.playButtonImage;
         }
