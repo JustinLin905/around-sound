@@ -13,6 +13,7 @@ public class MusicControls : MonoBehaviour
     public GameObject errorText;
     public TextMeshProUGUI songTimeText;
     public TextMeshProUGUI songTitleText;
+    public TextMeshProUGUI nextUpText;
     public TextMeshProUGUI queueText;
 
     private float currentTime;
@@ -208,15 +209,20 @@ public class MusicControls : MonoBehaviour
 
             songTimeText.text = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
 
+            string currentSongName = currentSong.name;
             // Truncate song name if it's too long
-            if (currentSong.name.Length > 30)
+            if (currentSongName.Length > 30)
             {
-                songTitleText.text = currentSong.name.Substring(0, 30) + "...";
-            }
-            else
+                currentSongName = currentSongName.Substring(0, 30) + "...";
+            }     
+            songTitleText.text = currentSongName;
+
+            string nextUpName = queue[(currentSongIndex + 1) % queue.Count].name;
+            if (nextUpName.Length > 45)
             {
-                songTitleText.text = currentSong.name;
+                nextUpName = nextUpName.Substring(0, 45) + "...";
             }
+            nextUpText.text = "Next up: " + nextUpName;
         }
     }
 
