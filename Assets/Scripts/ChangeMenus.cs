@@ -34,7 +34,7 @@ public class ChangeMenus : MonoBehaviour
             StartCoroutine(SetMenuActive(editMenu));
         }
 
-        else if (OVRInput.GetDown(OVRInput.Button.Two))
+        else if (OVRInput.GetDown(OVRInput.Button.Two) && !(editMenu.activeSelf && OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger)))
         {
             if (mainMenu.activeSelf)
             {

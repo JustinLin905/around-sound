@@ -125,12 +125,19 @@ public class EditMode : MonoBehaviour
             }
         }
 
+        // Destroy all speakers
         if (OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
             GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
             foreach (GameObject speaker in speakers)
             {
                 Destroy(speaker);
+            }
+
+            // Disable all ghost speakers
+            for (int i = 0; i < ghostSpeakerTypes.Length; i++)
+            {
+                ghostSpeakerTypes[i].SetActive(false);
             }
 
             musicControls.nowPlaying = false;
