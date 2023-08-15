@@ -8,80 +8,76 @@ public class ChangeMenus : MonoBehaviour
     public GameObject mainMenu;
     public GameObject editMenu;
     public GameObject musicControls;
-    public GameObject musicQueue;
     public GameObject environmentMenu;
 
     private Animator anim;
+
+    private GameObject activeMenu;
+    private bool isAnimating = false;
 
     private void Start()
     {
         mainMenu.SetActive(true);
         editMenu.SetActive(false);
         musicControls.SetActive(false);
-        musicQueue.SetActive(false);
         environmentMenu.SetActive(false);
+
+        activeMenu = mainMenu;
     }
     
     private void Update()
     {
+        if (isAnimating) return;
+
         if (OVRInput.GetDown(OVRInput.Button.Four) && mainMenu.activeSelf)
         {
-            StartCoroutine(SetMenuActive(mainMenu, false));
-            StartCoroutine(SetMenuActive(editMenu, true));
-            StartCoroutine(SetMenuActive(musicControls, false));
-            StartCoroutine(SetMenuActive(musicQueue, false));
-            StartCoroutine(SetMenuActive(environmentMenu, false));
+            StartCoroutine(SetMenuActive(editMenu));
         }
 
         else if (OVRInput.GetDown(OVRInput.Button.Two))
         {
-            StartCoroutine(SetMenuActive(editMenu, false));
-            StartCoroutine(SetMenuActive(musicControls, false));
-            StartCoroutine(SetMenuActive(musicQueue, false));
-            StartCoroutine(SetMenuActive(environmentMenu, false));
-
             if (mainMenu.activeSelf)
             {
-                StartCoroutine(SetMenuActive(mainMenu, false));
+                StartCoroutine(SetMenuActive(mainMenu, true));
             }
             else
             {
-                StartCoroutine(SetMenuActive(mainMenu, true));
+                StartCoroutine(SetMenuActive(mainMenu));
             }
         }
 
         else if (OVRInput.GetDown(OVRInput.Button.Start))
         {
-            StartCoroutine(SetMenuActive(mainMenu, false));
-            StartCoroutine(SetMenuActive(editMenu, false));
-            StartCoroutine(SetMenuActive(musicControls, true));
-            StartCoroutine(SetMenuActive(musicQueue, true));
-            StartCoroutine(SetMenuActive(environmentMenu, false));
+            StartCoroutine(SetMenuActive(musicControls));
 
         }
         
         else if (OVRInput.GetDown(OVRInput.Button.Three) && mainMenu.activeSelf) {
-            StartCoroutine(SetMenuActive(mainMenu, false));
-            StartCoroutine(SetMenuActive(editMenu, false));
-            StartCoroutine(SetMenuActive(musicControls, false));
-            StartCoroutine(SetMenuActive(musicQueue, false));
-            StartCoroutine(SetMenuActive(environmentMenu, true));
+            StartCoroutine(SetMenuActive(environmentMenu));
         }
     }
 
-    private IEnumerator SetMenuActive(GameObject menu, bool active)
+    private IEnumerator SetMenuActive(GameObject menu, bool disableAll = false)
     {
-        if (active) {
+        isAnimating = true;
+
+        if (activeMenu.activeSelf)
+        {
+            anim = activeMenu.GetComponent<Animator>();
+            anim.Play("Base Layer.Shrinking");
+            yield return new WaitForSeconds(0.3f);
+            activeMenu.SetActive(false);
+        }
+
+        if (!disableAll)
+        {
             menu.SetActive(true);
             anim = menu.GetComponent<Animator>();
             anim.Play("Base Layer.Growing");
-        }
-
-        else {
-            anim = menu.GetComponent<Animator>();
-            anim.Play("Base Layer.Shrinking");
+            activeMenu = menu;
             yield return new WaitForSeconds(0.3f);
-            menu.SetActive(false);
         }
+        
+        isAnimating = false;
     }
 }

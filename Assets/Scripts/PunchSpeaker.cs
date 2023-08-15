@@ -37,6 +37,7 @@ public class PunchSpeaker : MonoBehaviour
     private IEnumerator DestroySpeaker()
     {
         AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.spatialBlend = 0f;
         audioSource.PlayOneShot(pop);
         yield return new WaitForSeconds(0.1f);
 

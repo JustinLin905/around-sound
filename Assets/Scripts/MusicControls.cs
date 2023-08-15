@@ -32,6 +32,7 @@ public class MusicControls : MonoBehaviour
     // For music queue
     private List<Song> queue = new List<Song>();
     private int currentSongIndex = 0;
+    private const int MAX_DISPLAYED_SONGS = 3;
 
     private void Start()
     {
@@ -160,6 +161,7 @@ public class MusicControls : MonoBehaviour
         StartCoroutine(PushButtonVisual(rewindButton));
         playButton.sprite = pauseButtonImage;
         nowPlaying = true;
+        SetQueueText();
     }
 
     void SkipAudio()
@@ -191,6 +193,7 @@ public class MusicControls : MonoBehaviour
         StartCoroutine(PushButtonVisual(forwardButton));
         playButton.sprite = pauseButtonImage;
         nowPlaying = true;
+        SetQueueText();
     }
 
     void UpdateMetadata()
@@ -279,11 +282,23 @@ public class MusicControls : MonoBehaviour
         queue.Insert(0, new Song("One Kiss (Calvis Harris)", clip));
         currentSong = queue[currentSongIndex];
 
-        // Make queueText display name of all songs in audioClips (temporary)
+        SetQueueText();
+    }
+
+    private void SetQueueText()
+    {
         string queueString = "";
-        foreach (Song clip in queue)
+        for (int i = currentSongIndex; i < queue.Count; i++)
         {
-            queueString += clip.name + "\n";
+            if (i - currentSongIndex < MAX_DISPLAYED_SONGS)
+            {
+                queueString += queue[i].name + "\n";
+            }
+            else
+            {
+                queueString += "...";
+                break;
+            }
         }
         queueText.text = queueString;
     }
