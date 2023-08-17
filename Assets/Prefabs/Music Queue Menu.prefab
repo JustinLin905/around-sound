@@ -343,8 +343,8 @@ GameObject:
   - component: {fileID: 767075905504136238}
   - component: {fileID: 767075905504136237}
   m_Layer: 0
-  m_Name: Songs List
-  m_TagString: Untagged
+  m_Name: Queue Text
+  m_TagString: Queue Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3862424538315939334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -889,7 +889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.94, y: -49.783}
+  m_AnchoredPosition: {x: 49.937008, y: -49.769073}
   m_SizeDelta: {x: 0.049999237, y: 0.049999237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &138958580468055531
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9411765, b: 0.47843137, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

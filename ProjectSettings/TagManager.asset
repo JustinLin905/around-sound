@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Speakers
+  - Controller
+  - Queue Text
   layers:
   - Default
   - TransparentFX

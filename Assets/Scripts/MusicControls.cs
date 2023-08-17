@@ -14,7 +14,7 @@ public class MusicControls : MonoBehaviour
     public TextMeshProUGUI songTimeText;
     public TextMeshProUGUI songTitleText;
     public TextMeshProUGUI nextUpText;
-    public TextMeshProUGUI queueText;
+    public TextMeshProUGUI mainQueueText;
 
     private float currentTime;
     public bool nowPlaying;
@@ -33,12 +33,25 @@ public class MusicControls : MonoBehaviour
     private List<Song> queue = new List<Song>();
     private int currentSongIndex = 0;
     private const int MAX_DISPLAYED_SONGS = 3;
+    private List<TextMeshProUGUI> queueTexts;
 
     private void Start()
     {
         errorText.SetActive(false);
         currentTime = 0f;
         nowPlaying = false;
+
+        // Get all TextMeshProUGUI with tag "Queue Text". This is to update all canvases which display the queue
+        queueTexts = new List<TextMeshProUGUI>();
+
+        foreach(GameObject go in GameObject.FindGameObjectsWithTag("Queue Text")) 
+        {
+            queueTexts.AddRange(go.GetComponentsInChildren<TextMeshProUGUI>());
+            Debug.Log("Foundqueuetext");
+        }
+
+        // Add handheld queue text to list, since it will be inactive at start and will not be found by the above
+        queueTexts.Add(mainQueueText);
     }
 
     private void OnEnable()
@@ -290,7 +303,11 @@ public class MusicControls : MonoBehaviour
         string queueString = "";
         for (int i = currentSongIndex; i < queue.Count; i++)
         {
-            if (i - currentSongIndex < MAX_DISPLAYED_SONGS)
+            if (i - currentSongIndex < MAX_DISPLAYED_SONGS && i == currentSongIndex)
+            {
+                queueString += "<color=#fff07a>" + queue[i].name + "</color>\n";
+            }
+            else if (i - currentSongIndex < MAX_DISPLAYED_SONGS)
             {
                 queueString += queue[i].name + "\n";
             }
@@ -300,7 +317,16 @@ public class MusicControls : MonoBehaviour
                 break;
             }
         }
-        queueText.text = queueString;
+
+        foreach (TextMeshProUGUI queueText in queueTexts)
+        {
+            queueText.text = queueString;
+        }
+    }
+
+    public Song GetCurrentSong()
+    {
+        return currentSong;
     }
 
     IEnumerator PushButtonVisual(Image buttonImage)
