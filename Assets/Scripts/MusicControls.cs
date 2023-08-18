@@ -15,6 +15,7 @@ public class MusicControls : MonoBehaviour
     public TextMeshProUGUI songTitleText;
     public TextMeshProUGUI nextUpText;
     public TextMeshProUGUI mainQueueText;
+    private string formattedTimeText;
 
     private float currentTime;
     public bool nowPlaying;
@@ -32,7 +33,7 @@ public class MusicControls : MonoBehaviour
     // For music queue
     private List<Song> queue = new List<Song>();
     private int currentSongIndex = 0;
-    private const int MAX_DISPLAYED_SONGS = 3;
+    private const int MAX_DISPLAYED_SONGS = 14;
     private List<TextMeshProUGUI> queueTexts;
 
     private void Start()
@@ -50,7 +51,7 @@ public class MusicControls : MonoBehaviour
             Debug.Log("Foundqueuetext");
         }
 
-        // Add handheld queue text to list, since it will be inactive at start and will not be found by the above
+        // Add handheld  queue text to list, since it will be inactive at start and will not be found by the above
         queueTexts.Add(mainQueueText);
     }
 
@@ -223,7 +224,8 @@ public class MusicControls : MonoBehaviour
             string totalMinutes = Mathf.Floor(totalTime / 60).ToString("00");
             string totalSeconds = Mathf.Floor(totalTime % 60).ToString("00");
 
-            songTimeText.text = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
+            formattedTimeText = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
+            songTimeText.text = formattedTimeText;
 
             string currentSongName = currentSong.name;
             // Truncate song name if it's too long
@@ -324,9 +326,19 @@ public class MusicControls : MonoBehaviour
         }
     }
 
-    public Song GetCurrentSong()
+    public string[] GetCurrentSongMetadata()
     {
-        return currentSong;
+        string songName;
+        if (currentSong == null)
+        {
+            songName = "---";
+        }
+        else
+        {
+            songName = currentSong.name;
+        }
+        string[] metadata = { songName, formattedTimeText };
+        return metadata;
     }
 
     IEnumerator PushButtonVisual(Image buttonImage)
