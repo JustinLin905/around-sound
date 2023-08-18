@@ -236,6 +236,10 @@ PrefabInstance:
       value: Now Playing Menu
       objectReference: {fileID: 0}
     - target: {fileID: 1155654982592638944, guid: 5392e43f1c90d18449f078af126df137, type: 3}
+      propertyPath: changeMenus
+      value: 
+      objectReference: {fileID: 994262756}
+    - target: {fileID: 1155654982592638944, guid: 5392e43f1c90d18449f078af126df137, type: 3}
       propertyPath: musicControls
       value: 
       objectReference: {fileID: 994262757}
@@ -1640,7 +1644,7 @@ PrefabInstance:
 
 
         Press
-        [B] to Toggle UI'
+        [B] to Hide/Show UI'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -14975,6 +14979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Now Playing Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 1155654982592638944, guid: 5392e43f1c90d18449f078af126df137, type: 3}
+      propertyPath: changeMenus
+      value: 
+      objectReference: {fileID: 994262756}
     - target: {fileID: 1155654982592638944, guid: 5392e43f1c90d18449f078af126df137, type: 3}
       propertyPath: musicControls
       value: 

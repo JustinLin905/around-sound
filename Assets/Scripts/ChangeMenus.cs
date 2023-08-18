@@ -14,6 +14,7 @@ public class ChangeMenus : MonoBehaviour
 
     private GameObject activeMenu;
     private bool isAnimating = false;
+    private bool menuHidden = false;
 
     private void Start()
     {
@@ -75,9 +76,19 @@ public class ChangeMenus : MonoBehaviour
             anim = menu.GetComponent<Animator>();
             anim.Play("Base Layer.Growing");
             activeMenu = menu;
+            menuHidden = false;
             yield return new WaitForSeconds(0.3f);
+        }
+        else
+        {
+            menuHidden = true;
         }
         
         isAnimating = false;
+    }
+
+    public bool IsMenuHidden()
+    {
+        return menuHidden;
     }
 }
