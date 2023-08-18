@@ -62,6 +62,8 @@ public class MusicControls : MonoBehaviour
 
     private void Update()
     {
+        UpdateMetadata();
+
         if (!musicControlsMenu.activeSelf) return;
 
         if (OVRInput.GetDown(OVRInput.Button.One))
@@ -86,8 +88,6 @@ public class MusicControls : MonoBehaviour
         {
             SeekTenSeconds(false);
         }
-
-        UpdateMetadata();
     }
 
     void PlayPause()
@@ -212,7 +212,6 @@ public class MusicControls : MonoBehaviour
 
     void UpdateMetadata()
     { 
-        // Second conditional may be unnecessary
         if (activeAudiosource != null && activeAudiosource.clip != null)
         {
             currentTime = activeAudiosource.time;
@@ -226,6 +225,8 @@ public class MusicControls : MonoBehaviour
 
             formattedTimeText = currentMinutes + ":" + currentSeconds + " / " + totalMinutes + ":" + totalSeconds;
             songTimeText.text = formattedTimeText;
+
+            if (!musicControlsMenu.activeSelf) return;
 
             string currentSongName = currentSong.name;
             // Truncate song name if it's too long
