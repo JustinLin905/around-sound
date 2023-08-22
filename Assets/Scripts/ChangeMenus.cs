@@ -18,7 +18,7 @@ public class ChangeMenus : MonoBehaviour
 
     private void Start()
     {
-        mainMenu.SetActive(true);
+        mainMenu.SetActive(false);
         editMenu.SetActive(false);
         musicControls.SetActive(false);
         environmentMenu.SetActive(false);
@@ -85,6 +85,11 @@ public class ChangeMenus : MonoBehaviour
         }
         
         isAnimating = false;
+    }
+
+    public void ViewMainMenu()
+    {
+        StartCoroutine(SetMenuActive(mainMenu));
     }
 
     public bool IsMenuHidden()
