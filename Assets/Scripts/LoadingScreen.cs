@@ -29,9 +29,8 @@ public class LoadingScreen : MonoBehaviour
         OVRPlayerController playerController = player.GetComponent<OVRPlayerController>();
         playerController.enabled = false;
         player.transform.position = apartmentSpawnAnchor.transform.position;
+        yield return new WaitForSeconds(0.05f);
         playerController.enabled = true;
-        Debug.Log("Teleporting player to: " + player.transform.position);
-        yield return new WaitForSeconds(0.01f);
         changeMenus.ViewMainMenu();
     }
 

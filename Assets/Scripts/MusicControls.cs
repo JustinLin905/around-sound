@@ -64,19 +64,23 @@ public class MusicControls : MonoBehaviour
     {
         UpdateMetadata();
 
+        // Always check if the current song is over
+        if (activeAudiosource != null && activeAudiosource.time >= activeAudiosource.clip.length)
+        {
+            SkipAudio();
+        }
+
         if (!musicControlsMenu.activeSelf) return;
 
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
             PlayPause();
         }
-
         if (OVRInput.GetDown(OVRInput.Button.Three))
         {
             RewindAudio();
         }
-
-        if (OVRInput.GetDown(OVRInput.Button.Four) || (activeAudiosource != null && activeAudiosource.time >= activeAudiosource.clip.length))
+        if (OVRInput.GetDown(OVRInput.Button.Four))
         {
             SkipAudio();
         }
@@ -180,6 +184,7 @@ public class MusicControls : MonoBehaviour
 
     void SkipAudio()
     {
+        Debug.Log("SkipAudio() called");
         currentSongIndex++;
         if (currentSongIndex >= queue.Count)
         {
@@ -242,6 +247,13 @@ public class MusicControls : MonoBehaviour
                 nextUpName = nextUpName.Substring(0, 45) + "...";
             }
             nextUpText.text = "Next up: " + nextUpName;
+        }
+        else {
+            Debug.Log("activeAudiosource: " + activeAudiosource);
+            if (activeAudiosource != null)
+            {
+                Debug.Log("activeAudiosource.clip: " + activeAudiosource.clip);
+            }
         }
     }
 
@@ -346,8 +358,15 @@ public class MusicControls : MonoBehaviour
     {
         float[] metadata = new float[2];
         metadata[0] = currentTime;
-        metadata[1] = currentSong.clip.length;
 
+        if (currentSong == null || currentSong.clip == null)
+        {
+            metadata[1] = 0f;
+        }
+        else
+        {
+            metadata[1] = currentSong.clip.length;
+        }
         return metadata;
     }
 
