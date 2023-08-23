@@ -327,7 +327,7 @@ public class MusicControls : MonoBehaviour
         }
     }
 
-    public string[] GetCurrentSongMetadata()
+    public string GetSongName()
     {
         string songName;
         if (currentSong == null)
@@ -338,7 +338,16 @@ public class MusicControls : MonoBehaviour
         {
             songName = currentSong.name;
         }
-        string[] metadata = { songName, formattedTimeText };
+
+        return songName;
+    }
+
+    public float[] GetTimeMetadata()
+    {
+        float[] metadata = new float[2];
+        metadata[0] = currentTime;
+        metadata[1] = currentSong.clip.length;
+
         return metadata;
     }
 
