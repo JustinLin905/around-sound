@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: dda689a43500d8845ba9b41639f68393, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2021,6 +2021,7 @@ MonoBehaviour:
   player: {fileID: 1877476340}
   apartmentSpawnAnchor: {fileID: 786556876}
   changeMenus: {fileID: 994262756}
+  fogController: {fileID: 994262759}
 --- !u!1001 &123513023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14826,8 +14827,9 @@ GameObject:
   - component: {fileID: 994262756}
   - component: {fileID: 994262757}
   - component: {fileID: 994262758}
+  - component: {fileID: 994262759}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14920,6 +14922,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   errorLoadingText: {fileID: 806623965}
   musicControls: {fileID: 994262757}
+--- !u!114 &994262759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994262752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d6c8393eb81a64fb89bd23cbd2bd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  universalAudiosource: {fileID: 1399378101}
+  fogSound: {fileID: 8300000, guid: 4e4e13ab4062bb9479cd0d45b38ae89d, type: 3}
 --- !u!1 &994756977
 GameObject:
   m_ObjectHideFlags: 0
@@ -20289,7 +20305,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -9,6 +9,7 @@ public class LoadingScreen : MonoBehaviour
     public GameObject apartmentSpawnAnchor;
 
     public ChangeMenus changeMenus;
+    public FogController fogController;
 
     void Start()
     {
@@ -26,9 +27,15 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator StartGame()
     {
+        // Roll dark fog
+        fogController.ShowFog(0.8f);
+        yield return new WaitForSeconds(2f);
+
+        // Teleport player to apartment
         OVRPlayerController playerController = player.GetComponent<OVRPlayerController>();
         playerController.enabled = false;
         player.transform.position = apartmentSpawnAnchor.transform.position;
+        
         yield return new WaitForSeconds(0.05f);
         playerController.enabled = true;
         changeMenus.ViewMainMenu();
