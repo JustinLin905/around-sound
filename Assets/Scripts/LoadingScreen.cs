@@ -7,6 +7,7 @@ public class LoadingScreen : MonoBehaviour
     private bool started = false;
     public GameObject player;
     public GameObject apartmentSpawnAnchor;
+    public GameObject[] orbs;
 
     public ChangeMenus changeMenus;
     public FogController fogController;
@@ -29,6 +30,11 @@ public class LoadingScreen : MonoBehaviour
     {
         // Roll dark fog
         fogController.ShowFog(0.8f);
+        
+        foreach (GameObject orb in orbs)
+        {
+            Destroy(orb);
+        }
         yield return new WaitForSeconds(2f);
 
         // Teleport player to apartment

@@ -166,7 +166,6 @@ public class EditMode : MonoBehaviour
             }
         }
 
-        // prefabToSpawn = speakerTypes[speakerIndex];
         selectedBGs[speakerIndex].SetActive(true);
 
         for (int i = 0; i < speakerTypes.Length; i++)
