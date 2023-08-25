@@ -24,6 +24,9 @@ public class EditMode : MonoBehaviour
     public GameObject ghostMidrange;
     public GameObject ghostTweeter;
 
+    public AudioSource universalAudiosource;
+    public AudioClip deleteSound;
+
     private GameObject[] speakerTypes;
     private GameObject[] ghostSpeakerTypes;
     public GameObject[] selectedBGs;
@@ -64,20 +67,6 @@ public class EditMode : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength * 10))
             {
-                //// Draw ray and temporary speaker
-                //GameObject temporaryRay = new GameObject();
-                //temporaryRay.transform.position = transform.position;
-                //temporaryRay.AddComponent<LineRenderer>();
-                //LineRenderer lr = temporaryRay.GetComponent<LineRenderer>();
-                //lr.startWidth = 0.01f;
-                //lr.endWidth = 0.01f;
-                //lr.SetPosition(0, temporaryRay.transform.position);
-                //lr.SetPosition(1, hit.point);
-                //lr.material = temporaryMat;
-
-                //GameObject.Destroy(temporaryRay, 0.05f);
-                // GameObject.Destroy(temporarySpeaker, 0.05f);
-
                 // Create ghost speaker
                 ghostSpeakerTypes[speakerIndex].SetActive(true);
                 ghostSpeakerTypes[speakerIndex].transform.position = hit.point;
@@ -142,6 +131,7 @@ public class EditMode : MonoBehaviour
 
             musicControls.nowPlaying = false;
             musicControls.playButton.sprite = musicControls.playButtonImage;
+            universalAudiosource.PlayOneShot(deleteSound);
         }
 
         // Choose speaker type

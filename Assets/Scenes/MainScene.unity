@@ -1605,6 +1605,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 250696433, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: pop
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a752d3328516a44384df0f171c8a5ca, type: 3}
+    - target: {fileID: 250696433, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: ghostTweeter
       value: 
       objectReference: {fileID: 1355005606}
@@ -1624,6 +1628,10 @@ PrefabInstance:
       propertyPath: ghostSpeakerTower
       value: 
       objectReference: {fileID: 1891155858}
+    - target: {fileID: 250696433, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: universalAudiosource
+      value: 
+      objectReference: {fileID: 1399378101}
     - target: {fileID: 842628799, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5085,7 +5093,7 @@ Transform:
   m_GameObject: {fileID: 323860134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 2.5}
-  m_LocalScale: {x: 5, y: 3, z: 0.01}
+  m_LocalScale: {x: 5, y: 3, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2028854368}
@@ -7265,7 +7273,7 @@ Transform:
   m_GameObject: {fileID: 507135342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.5, y: 1.5, z: -1.5}
-  m_LocalScale: {x: 0.01, y: 3, z: 8}
+  m_LocalScale: {x: 0.1, y: 3, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2028854368}
@@ -13152,7 +13160,7 @@ Transform:
   m_GameObject: {fileID: 883166513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5, y: 1.5, z: -1.5}
-  m_LocalScale: {x: 0.01, y: 3, z: 8}
+  m_LocalScale: {x: 0.1, y: 3, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2028854368}
@@ -18187,7 +18195,7 @@ Transform:
   m_GameObject: {fileID: 1227116075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: -5.5}
-  m_LocalScale: {x: 5, y: 3, z: 0.01}
+  m_LocalScale: {x: 5, y: 3, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2028854368}
@@ -20305,7 +20313,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

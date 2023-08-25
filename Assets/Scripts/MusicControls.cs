@@ -184,7 +184,6 @@ public class MusicControls : MonoBehaviour
 
     void SkipAudio()
     {
-        Debug.Log("SkipAudio() called");
         currentSongIndex++;
         if (currentSongIndex >= queue.Count)
         {
@@ -247,13 +246,6 @@ public class MusicControls : MonoBehaviour
                 nextUpName = nextUpName.Substring(0, 45) + "...";
             }
             nextUpText.text = "Next up: " + nextUpName;
-        }
-        else {
-            Debug.Log("activeAudiosource: " + activeAudiosource);
-            if (activeAudiosource != null)
-            {
-                Debug.Log("activeAudiosource.clip: " + activeAudiosource.clip);
-            }
         }
     }
 

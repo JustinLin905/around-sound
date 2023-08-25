@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PunchSpeaker : MonoBehaviour
 {
-    public AudioClip pop;
+    private AudioSource universalAudiosource;
+    public AudioClip deleteSound;
     private int controllersInside = 0;
 
     private MusicControls musicControls;
 
     private void Start()
     {
-        musicControls = GameObject.Find("EventSystem").GetComponent<MusicControls>();
+        musicControls = GameObject.Find("Scripts").GetComponent<MusicControls>();
+        universalAudiosource = GameObject.Find("Universal Audiosource").GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,9 +38,7 @@ public class PunchSpeaker : MonoBehaviour
 
     private IEnumerator DestroySpeaker()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.spatialBlend = 0f;
-        audioSource.PlayOneShot(pop);
+        universalAudiosource.PlayOneShot(deleteSound);
         yield return new WaitForSeconds(0.1f);
 
         // If this is the last speaker, pause music
