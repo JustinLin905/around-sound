@@ -33,7 +33,7 @@ public class MusicControls : MonoBehaviour
     // For music queue
     private List<Song> queue = new List<Song>();
     private int currentSongIndex = 0;
-    private const int MAX_DISPLAYED_SONGS = 14;
+    // private const int MAX_DISPLAYED_SONGS = 14;
     private List<TextMeshProUGUI> queueTexts;
 
     private void Start()
@@ -234,16 +234,16 @@ public class MusicControls : MonoBehaviour
 
             string currentSongName = currentSong.name;
             // Truncate song name if it's too long
-            if (currentSongName.Length > 30)
+            if (currentSongName.Length > Constants.SONG_NAME_MAX_CHARS)
             {
-                currentSongName = currentSongName.Substring(0, 30) + "...";
+                currentSongName = currentSongName.Substring(0, Constants.SONG_NAME_MAX_CHARS) + "...";
             }     
             songTitleText.text = currentSongName;
 
             string nextUpName = queue[(currentSongIndex + 1) % queue.Count].name;
-            if (nextUpName.Length > 45)
+            if (nextUpName.Length > Constants.NEXT_UP_MAX_CHARS)
             {
-                nextUpName = nextUpName.Substring(0, 45) + "...";
+                nextUpName = nextUpName.Substring(0, Constants.NEXT_UP_MAX_CHARS) + "...";
             }
             nextUpText.text = "Next up: " + nextUpName;
         }
@@ -310,11 +310,11 @@ public class MusicControls : MonoBehaviour
         string queueString = "";
         for (int i = currentSongIndex; i < queue.Count; i++)
         {
-            if (i - currentSongIndex < MAX_DISPLAYED_SONGS && i == currentSongIndex)
+            if (i - currentSongIndex < Constants.MAX_DISPLAYED_SONGS_IN_QUEUE && i == currentSongIndex)
             {
                 queueString += "<color=#fff07a>" + queue[i].name + "</color>\n";
             }
-            else if (i - currentSongIndex < MAX_DISPLAYED_SONGS)
+            else if (i - currentSongIndex < Constants.MAX_DISPLAYED_SONGS_IN_QUEUE)
             {
                 queueString += queue[i].name + "\n";
             }

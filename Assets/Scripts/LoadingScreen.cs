@@ -29,8 +29,8 @@ public class LoadingScreen : MonoBehaviour
     IEnumerator StartGame()
     {
         // Roll dark fog
-        fogController.ShowFog(0.8f);
-        
+        fogController.ShowFog(Constants.TELEPORT_FOG_DENSITY);
+
         foreach (GameObject orb in orbs)
         {
             Destroy(orb);

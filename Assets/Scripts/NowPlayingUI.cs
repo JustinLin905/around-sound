@@ -34,9 +34,9 @@ public class NowPlayingUI : MonoBehaviour
         string songName = musicControls.GetSongName();
 
         // Truncate title text if too long
-        if (songName.Length > 30)
+        if (songName.Length > Constants.SONG_NAME_MAX_CHARS)
         {
-            songTitleText.text = songName.Substring(0, 30) + "...";
+            songTitleText.text = songName.Substring(0, Constants.SONG_NAME_MAX_CHARS) + "...";
         }
         else
         {

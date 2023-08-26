@@ -78,7 +78,7 @@ public class ChangeEnvironments : MonoBehaviour
     IEnumerator ChangeEnvironment()
     {
         // Roll dark fog
-        fogController.ShowFog(0.8f);
+        fogController.ShowFog(Constants.TELEPORT_FOG_DENSITY);
         yield return new WaitForSeconds(2f);
 
         // Teleport player to selected spawn anchor
