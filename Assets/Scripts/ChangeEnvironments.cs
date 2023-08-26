@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ChangeEnvironments : MonoBehaviour
 {
-    public GameObject[] environments;
+    public GameObject player;
+    public FogController fogController;
+
+    public GameObject[] environments;       // Teleport anchors for each environment
     public GameObject[] selectedBGs;
 
     private int environmentIndex = 0;
@@ -32,6 +35,11 @@ public class ChangeEnvironments : MonoBehaviour
         else if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y < -0.5f && !timeout)
         {
             SelectEnvironment(true);
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            StartCoroutine(ChangeEnvironment());
         }
     }
 
@@ -65,6 +73,21 @@ public class ChangeEnvironments : MonoBehaviour
                 selectedBGs[i].SetActive(false);
             }
         }
+    }
+
+    IEnumerator ChangeEnvironment()
+    {
+        // Roll dark fog
+        fogController.ShowFog(0.8f);
+        yield return new WaitForSeconds(2f);
+
+        // Teleport player to selected spawn anchor
+        OVRPlayerController playerController = player.GetComponent<OVRPlayerController>();
+        playerController.enabled = false;
+        player.transform.position = environments[environmentIndex].transform.position;
+        
+        yield return new WaitForSeconds(0.05f);
+        playerController.enabled = true;
     }
 
     IEnumerator SetTimeout()
