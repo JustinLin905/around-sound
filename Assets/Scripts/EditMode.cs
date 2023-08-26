@@ -11,6 +11,7 @@ public class EditMode : MonoBehaviour
     
     public GameObject editMenu;
 
+    public GameObject rightHandAnchor;
     public GameObject editRay;
     public GameObject prefabToSpawn;
 
@@ -65,13 +66,13 @@ public class EditMode : MonoBehaviour
 
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength * 10))
+            if (Physics.Raycast(rightHandAnchor.transform.position, rightHandAnchor.transform.forward, out hit, rayLength * 10))
             {
                 // Create ghost speaker
                 ghostSpeakerTypes[speakerIndex].SetActive(true);
                 ghostSpeakerTypes[speakerIndex].transform.position = hit.point;
 
-                Vector3 directionToTarget = transform.position - hit.point;
+                Vector3 directionToTarget = rightHandAnchor.transform.position - hit.point;
                 directionToTarget.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
                 ghostSpeakerTypes[speakerIndex].transform.rotation = targetRotation;
@@ -91,13 +92,13 @@ public class EditMode : MonoBehaviour
 
         else if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength * 10))
+            if (Physics.Raycast(rightHandAnchor.transform.position, rightHandAnchor.transform.forward, out hit, rayLength * 10))
             {
                 // Spawn speaker
                 GameObject newObj = Instantiate(speakerTypes[speakerIndex], hit.point, Quaternion.identity);
 
                 // Correct rotation
-                Vector3 directionToTarget = transform.position - hit.point;
+                Vector3 directionToTarget = rightHandAnchor.transform.position - hit.point;
                 directionToTarget.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
                 newObj.transform.rotation = targetRotation;
@@ -117,21 +118,7 @@ public class EditMode : MonoBehaviour
         // Destroy all speakers
         if (OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
-            GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
-            foreach (GameObject speaker in speakers)
-            {
-                Destroy(speaker);
-            }
-
-            // Disable all ghost speakers
-            for (int i = 0; i < ghostSpeakerTypes.Length; i++)
-            {
-                ghostSpeakerTypes[i].SetActive(false);
-            }
-
-            musicControls.nowPlaying = false;
-            musicControls.playButton.sprite = musicControls.playButtonImage;
-            universalAudiosource.PlayOneShot(deleteSound);
+            DestroyAllSpeakers();
         }
 
         // Choose speaker type
@@ -175,6 +162,25 @@ public class EditMode : MonoBehaviour
                 selectedBGs[i].SetActive(false);
             }
         }
+    }
+
+    public void DestroyAllSpeakers()
+    {
+        GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
+        foreach (GameObject speaker in speakers)
+        {
+            Destroy(speaker);
+        }
+
+        // Disable all ghost speakers
+        for (int i = 0; i < ghostSpeakerTypes.Length; i++)
+        {
+            ghostSpeakerTypes[i].SetActive(false);
+        }
+
+        musicControls.nowPlaying = false;
+        musicControls.playButton.sprite = musicControls.playButtonImage;
+        universalAudiosource.PlayOneShot(deleteSound);
     }
 
     IEnumerator SetTimeout()

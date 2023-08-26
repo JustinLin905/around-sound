@@ -6,6 +6,7 @@ public class ChangeEnvironments : MonoBehaviour
 {
     public GameObject player;
     public FogController fogController;
+    public EditMode editMode;
 
     public GameObject[] environments;       // Teleport anchors for each environment
     public GameObject[] selectedBGs;
@@ -77,6 +78,8 @@ public class ChangeEnvironments : MonoBehaviour
 
     IEnumerator ChangeEnvironment()
     {
+        editMode.DestroyAllSpeakers();
+
         // Roll dark fog
         fogController.ShowFog(Constants.TELEPORT_FOG_DENSITY);
         yield return new WaitForSeconds(2f);

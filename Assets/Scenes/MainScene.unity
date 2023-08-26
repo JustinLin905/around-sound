@@ -1469,6 +1469,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 911166418640317686, guid: a6d9ecb144205e144a2961aa48881f7e, type: 3}
   m_PrefabInstance: {fileID: 57173707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &67277340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 753441141, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &83493720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2130,7 +2135,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0.4921589
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 250696433, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 315125083, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       insertIndex: -1
@@ -9222,6 +9228,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3320441614581083275, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
   m_PrefabInstance: {fileID: 564333270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &573701772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1900789108, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &579830625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13114,6 +13125,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792325059}
   m_Mesh: {fileID: 4300012, guid: 8537129dc3fbbe44186add4eea186b85, type: 3}
+--- !u!1 &795444029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 127626811, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &798705426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13852,6 +13868,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3667825465465734118, guid: 226aa234041d2be48881aab9632ea78e, type: 3}
   m_PrefabInstance: {fileID: 854020657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &860172177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1517455400, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876086684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 876086684, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -14051,6 +14072,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883166513}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &890735785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 134650, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &897925586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15658,6 +15684,7 @@ GameObject:
   - component: {fileID: 994262757}
   - component: {fileID: 994262758}
   - component: {fileID: 994262759}
+  - component: {fileID: 994262760}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -15766,6 +15793,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   universalAudiosource: {fileID: 1399378101}
   fogSound: {fileID: 8300000, guid: 4e4e13ab4062bb9479cd0d45b38ae89d, type: 3}
+--- !u!114 &994262760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994262752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d5aeb63269ed44a9c010e41772882e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicControls: {fileID: 994262757}
+  editMenu: {fileID: 876086684}
+  rightHandAnchor: {fileID: 890735785}
+  editRay: {fileID: 573701772}
+  prefabToSpawn: {fileID: 1265651083546979984, guid: 0fc8b62272941684497a0ba0550ea50c, type: 3}
+  speakerTower: {fileID: 1265651083546979984, guid: e268d758a5046a74caff0b4d6ffb5f05, type: 3}
+  subwoofer: {fileID: 1265651083546979984, guid: 0fc8b62272941684497a0ba0550ea50c, type: 3}
+  midrange: {fileID: 1265651083546979984, guid: 1bc8e5e2ff724f34e8dbbb54d7b4a3bc, type: 3}
+  tweeter: {fileID: 1265651083546979984, guid: eb006c70cf281ed4ab8e13201d6acb88, type: 3}
+  ghostSpeakerTower: {fileID: 1891155858}
+  ghostSubwoofer: {fileID: 57173708}
+  ghostMidrange: {fileID: 987489690}
+  ghostTweeter: {fileID: 1355005606}
+  universalAudiosource: {fileID: 1399378101}
+  deleteSound: {fileID: 8300000, guid: 9a752d3328516a44384df0f171c8a5ca, type: 3}
+  selectedBGs:
+  - {fileID: 67277340}
+  - {fileID: 1029490349}
+  - {fileID: 860172177}
+  - {fileID: 795444029}
+  rayLength: 10
 --- !u!1 &994756977
 GameObject:
   m_ObjectHideFlags: 0
@@ -16413,6 +16473,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023662572}
   m_Mesh: {fileID: 4300010, guid: 8537129dc3fbbe44186add4eea186b85, type: 3}
+--- !u!1 &1029490349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 492776523, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 111283364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1032552049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18261,6 +18326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1877476340}
   fogController: {fileID: 994262759}
+  editMode: {fileID: 994262760}
   environments:
   - {fileID: 786556876}
   - {fileID: 301777151}
