@@ -34,7 +34,7 @@ public class EditSpeaker : MonoBehaviour
     {
         speakerPrefab = editMode.GetSpeakerType();
         frequencyFilter = speakerPrefab.GetComponent<FrequencyFilter>();
-        speakerTypeText.text = "Edit" + speakerPrefab.name;
+        speakerTypeText.text = "Edit " + speakerPrefab.name;
     }
 
     void Update()
@@ -48,15 +48,19 @@ public class EditSpeaker : MonoBehaviour
             SwapSelection(true);
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) && !timeout)
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && !timeout)
         {
             frequencyFilter.EditFrequency(selectionIndex, true);
-            StartCoroutine(SetTimeout());
+            StartCoroutine(SetTimeout(0.01f));
         }
-        else if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) && !timeout)
+        else if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) && !timeout)
         {
             frequencyFilter.EditFrequency(selectionIndex, false);
-            StartCoroutine(SetTimeout());
+            StartCoroutine(SetTimeout(0.01f));
+        }
+        else if (OVRInput.GetDown(OVRInput.Button.Three))
+        {
+            frequencyFilter.ResetFrequencies();
         }
 
         UpdateText();
@@ -101,10 +105,10 @@ public class EditSpeaker : MonoBehaviour
         sharpnessText.text = frequencyFilter.cutoffSharpness.ToString();
     }
 
-    IEnumerator SetTimeout()
+    IEnumerator SetTimeout(float time = 0.15f)
     {
         timeout = true;
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(time);
         timeout = false;
     }
 }

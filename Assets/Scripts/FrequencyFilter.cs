@@ -10,21 +10,28 @@ public class FrequencyFilter : MonoBehaviour
     public int lowCutoff = 20;
     public int highCutoff = 250;
     public int cutoffSharpness = 3;
+    public int defaultLowCutoff = 20;
+    public int defaultHighCutoff = 250;
+    public int defaultCutoffSharpness = 3;
     public bool filterEnabled = true;
 
     void Start()
     {
-        if (!filterEnabled)
-        {
-            return;
-        }
-
         // Gonna have to change to InChildren
         audioSource = GetComponent<AudioSource>();
 
+        if (!filterEnabled) return;
+
         // Add a low & high pass filter
-        lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
+        if (lowPassFilter == null)
+        {
+            lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        }
+        
+        if (highPassFilter == null)
+        {
+            highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
+        }
 
         UpdateFilters();
     }
@@ -43,6 +50,11 @@ public class FrequencyFilter : MonoBehaviour
             {
                 case 0:
                     lowCutoff += 5;
+
+                    if (lowCutoff > highCutoff)
+                    {
+                        highCutoff = lowCutoff;
+                    }
                     break;
                 case 1:
                     highCutoff += 5;
@@ -62,6 +74,11 @@ public class FrequencyFilter : MonoBehaviour
                     break;
                 case 1:
                     highCutoff -= 5;
+
+                    if (highCutoff < lowCutoff)
+                    {
+                        lowCutoff = highCutoff;
+                    }
                     break;
                 case 2:
                     cutoffSharpness -= 1;
@@ -71,17 +88,49 @@ public class FrequencyFilter : MonoBehaviour
                     }
                     break;
             }
+
+            if (lowCutoff < 0) 
+            {
+                lowCutoff = 0;
+            }
+
+            if (highCutoff < 0)
+            {
+                highCutoff = 0;
+            }
         }
+
+        UpdateFilters();
+    }
+
+    public void ResetFrequencies()
+    {
+        lowCutoff = defaultLowCutoff;
+        highCutoff = defaultHighCutoff;
+        cutoffSharpness = defaultCutoffSharpness;
 
         UpdateFilters();
     }
 
     private void UpdateFilters()
     {
-        lowPassFilter.cutoffFrequency = highCutoff;
-        lowPassFilter.lowpassResonanceQ = cutoffSharpness;
+        if (lowPassFilter == null)
+        {
+            lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        }
 
-        highPassFilter.cutoffFrequency = lowCutoff;
-        highPassFilter.highpassResonanceQ = cutoffSharpness;
+        if (highPassFilter == null)
+        {
+            highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
+        }
+
+        if (filterEnabled)
+        {
+            lowPassFilter.cutoffFrequency = highCutoff;
+            lowPassFilter.lowpassResonanceQ = cutoffSharpness;
+
+            highPassFilter.cutoffFrequency = lowCutoff;
+            highPassFilter.highpassResonanceQ = cutoffSharpness;
+        }
     }
 }

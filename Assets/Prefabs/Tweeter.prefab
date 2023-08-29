@@ -52,6 +52,9 @@ MonoBehaviour:
   lowCutoff: 2000
   highCutoff: 20000
   cutoffSharpness: 3
+  defaultLowCutoff: 2000
+  defaultHighCutoff: 20000
+  defaultCutoffSharpness: 3
   filterEnabled: 1
 --- !u!114 &5646231282349886187
 MonoBehaviour:

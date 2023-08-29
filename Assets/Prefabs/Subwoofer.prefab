@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2039150706485223499}
   - component: {fileID: 77323578031875686}
   - component: {fileID: 122076942241875783}
+  - component: {fileID: 2580133622705660834}
+  - component: {fileID: -2642793892761902666}
   m_Layer: 3
   m_Name: Subwoofer
   m_TagString: Speakers
@@ -52,6 +54,9 @@ MonoBehaviour:
   lowCutoff: 20
   highCutoff: 250
   cutoffSharpness: 3
+  defaultLowCutoff: 20
+  defaultHighCutoff: 250
+  defaultCutoffSharpness: 3
   filterEnabled: 1
 --- !u!114 &5684460897461177947
 MonoBehaviour:
@@ -191,6 +196,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!169 &2580133622705660834
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265651083546979984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 3
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.010914052
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!165 &-2642793892761902666
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265651083546979984}
+  m_Enabled: 1
+  m_CutoffFrequency: 20
+  m_HighpassResonanceQ: 3
 --- !u!1001 &6494268790950597538
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2039150706485223499}
   - component: {fileID: 6979552197115193721}
   - component: {fileID: 4937823952303510279}
+  - component: {fileID: 6543195134451127874}
+  - component: {fileID: -1155226070889071684}
   m_Layer: 3
   m_Name: Mid-Range Speaker
   m_TagString: Speakers
@@ -52,6 +54,9 @@ MonoBehaviour:
   lowCutoff: 250
   highCutoff: 2000
   cutoffSharpness: 3
+  defaultLowCutoff: 250
+  defaultHighCutoff: 2000
+  defaultCutoffSharpness: 3
   filterEnabled: 1
 --- !u!114 &656222296700732344
 MonoBehaviour:
@@ -191,6 +196,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!169 &6543195134451127874
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265651083546979984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 3
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.09049568
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!165 &-1155226070889071684
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265651083546979984}
+  m_Enabled: 1
+  m_CutoffFrequency: 200
+  m_HighpassResonanceQ: 3
 --- !u!1001 &1096487631117410048
 PrefabInstance:
   m_ObjectHideFlags: 0
