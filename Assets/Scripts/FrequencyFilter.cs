@@ -17,7 +17,6 @@ public class FrequencyFilter : MonoBehaviour
 
     void Start()
     {
-        // Gonna have to change to InChildren
         audioSource = GetComponent<AudioSource>();
 
         if (!filterEnabled) return;

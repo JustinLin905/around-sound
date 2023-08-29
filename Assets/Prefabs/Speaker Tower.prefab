@@ -52,6 +52,9 @@ MonoBehaviour:
   lowCutoff: 0
   highCutoff: 0
   cutoffSharpness: 3
+  defaultLowCutoff: 20
+  defaultHighCutoff: 250
+  defaultCutoffSharpness: 3
   filterEnabled: 0
 --- !u!114 &3880084985392508944
 MonoBehaviour:
@@ -86,7 +89,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2
+  MinDistance: 1.5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

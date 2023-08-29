@@ -34,7 +34,7 @@ public class EditSpeaker : MonoBehaviour
     {
         speakerPrefab = editMode.GetSpeakerType();
         frequencyFilter = speakerPrefab.GetComponent<FrequencyFilter>();
-        speakerTypeText.text = "Edit " + speakerPrefab.name;
+        speakerTypeText.text = "Edit <b>" + speakerPrefab.name + "</b>";
     }
 
     void Update()
@@ -51,12 +51,22 @@ public class EditSpeaker : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && !timeout)
         {
             frequencyFilter.EditFrequency(selectionIndex, true);
-            StartCoroutine(SetTimeout(0.01f));
+            float time = 0.01f;
+            if (selectionIndex == 2)
+            {
+                time = 0.15f;
+            }
+            StartCoroutine(SetTimeout(time));
         }
         else if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) && !timeout)
         {
             frequencyFilter.EditFrequency(selectionIndex, false);
-            StartCoroutine(SetTimeout(0.01f));
+            float time = 0.01f;
+            if (selectionIndex == 2)
+            {
+                time = 0.15f;
+            }
+            StartCoroutine(SetTimeout(time));
         }
         else if (OVRInput.GetDown(OVRInput.Button.Three))
         {
