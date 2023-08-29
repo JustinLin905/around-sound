@@ -4,8 +4,8 @@ using UnityEngine;
 public class FrequencyFilter : MonoBehaviour
 {
     AudioSource audioSource;
-    AudioLowPassFilter lowPassFilter;
-    AudioHighPassFilter highPassFilter;
+    public AudioLowPassFilter lowPassFilter;
+    public AudioHighPassFilter highPassFilter;
 
     public int lowCutoff = 20;
     public int highCutoff = 250;
@@ -20,18 +20,7 @@ public class FrequencyFilter : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         if (!filterEnabled) return;
-
-        // Add a low & high pass filter
-        if (lowPassFilter == null)
-        {
-            lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        }
         
-        if (highPassFilter == null)
-        {
-            highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
-        }
-
         UpdateFilters();
     }
 
@@ -113,16 +102,6 @@ public class FrequencyFilter : MonoBehaviour
 
     private void UpdateFilters()
     {
-        if (lowPassFilter == null)
-        {
-            lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        }
-
-        if (highPassFilter == null)
-        {
-            highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
-        }
-
         if (filterEnabled)
         {
             lowPassFilter.cutoffFrequency = highCutoff;

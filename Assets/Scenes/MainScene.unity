@@ -1737,6 +1737,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1369345722980405988, guid: d46fa1eeedbcb0e41b8c735b2594b434, type: 3}
   m_PrefabInstance: {fileID: 90457578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &90457580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9063128926208519524, guid: d46fa1eeedbcb0e41b8c735b2594b434, type: 3}
+  m_PrefabInstance: {fileID: 90457578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &90457581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90457580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.08
+    - frequency: 250
+      data: 0.24
+    - frequency: 500
+      data: 0.57
+    - frequency: 1000
+      data: 0.69
+    - frequency: 2000
+      data: 0.71
+    - frequency: 4000
+      data: 0.73
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.15
+    - frequency: 500
+      data: 0.2
+    - frequency: 1000
+      data: 0.25
+    - frequency: 2000
+      data: 0.35
+    - frequency: 4000
+      data: 0.5
+  preset_: 6
+--- !u!114 &90457582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90457580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Furniture-Sofa_Apt_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &105968149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1935,7 +2013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 876086684, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1124339770, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
@@ -1951,7 +2029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406936361, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1855327126, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_Pivot.y
@@ -2503,6 +2581,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2065881535484882948, guid: c39a7487ae8768f46b4f6344ce704453, type: 3}
   m_PrefabInstance: {fileID: 123513023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &123513025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2003614675576326160, guid: c39a7487ae8768f46b4f6344ce704453, type: 3}
+  m_PrefabInstance: {fileID: 123513023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &123513026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123513025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.02
+    - frequency: 250
+      data: 0.06
+    - frequency: 500
+      data: 0.14
+    - frequency: 1000
+      data: 0.37
+    - frequency: 2000
+      data: 0.48
+    - frequency: 4000
+      data: 0.63
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.15
+    - frequency: 500
+      data: 0.2
+    - frequency: 1000
+      data: 0.25
+    - frequency: 2000
+      data: 0.35
+    - frequency: 4000
+      data: 0.5
+  preset_: 5
+--- !u!114 &123513027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123513025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Bathroom-Props-BathroomMat_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &130887976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3902,7 +4058,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 549830739}
-  m_RootOrder: 51
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -270, z: -0.328}
 --- !u!65 &212794013
 BoxCollider:
@@ -4132,6 +4288,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2483685999063698019, guid: 36510e737e626954986f2c5112be9091, type: 3}
   m_PrefabInstance: {fileID: 219518797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &219518799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743020621460257955, guid: 36510e737e626954986f2c5112be9091, type: 3}
+  m_PrefabInstance: {fileID: 219518797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &219518800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219518799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &219518801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219518799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_SD_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &220641214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,6 +4946,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5580612955541943704, guid: c18b481f066a5da4b914f47a90e23ac4, type: 3}
   m_PrefabInstance: {fileID: 234716835}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &234716837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5580612955541943707, guid: c18b481f066a5da4b914f47a90e23ac4, type: 3}
+  m_PrefabInstance: {fileID: 234716835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &234716838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234716837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &234716839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234716837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Walls-Int_Apt_01_Wall_04 (1)-Window
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &243780800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,8 +5413,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Multi-room environment with home-like sound profile. Great for simulating
-    what speakers would sound like indoors.
+  m_text: Multi-room environment with soundproof walls. Great for simulating what
+    speakers would sound like indoors.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5348,6 +5660,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4693190733790175638, guid: af872b04269986143906a126ca9ff444, type: 3}
   m_PrefabInstance: {fileID: 273884574}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &273884576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830421572321717154, guid: af872b04269986143906a126ca9ff444, type: 3}
+  m_PrefabInstance: {fileID: 273884574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &273884577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273884576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 0
+--- !u!114 &273884578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273884576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_DD_02
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &285956671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5877,6 +6231,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5905695572330950812, guid: 1091ee0a141f2ba429668a6cc5a0f03e, type: 3}
   m_PrefabInstance: {fileID: 312026232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &312026234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167177008488376570, guid: 1091ee0a141f2ba429668a6cc5a0f03e, type: 3}
+  m_PrefabInstance: {fileID: 312026232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &312026235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312026234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &312026236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312026234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-Monitor_Apt_01
+    (1)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &312614062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,6 +6480,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1382648566164412814, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
   m_PrefabInstance: {fileID: 314715720}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &314715722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5987332885971693606, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
+  m_PrefabInstance: {fileID: 314715720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &314715723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314715722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 7
+--- !u!114 &314715724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314715722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Base_SD_01
+    (3)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &323860134
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +8253,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1050032160271745289, guid: 646857c834326db489fedada3df0bbc5, type: 3}
   m_PrefabInstance: {fileID: 446368962}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &446368964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4898012921678761536, guid: 646857c834326db489fedada3df0bbc5, type: 3}
+  m_PrefabInstance: {fileID: 446368962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446368965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446368964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &446368966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446368964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-Wall_Mirror_02
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &456164712
 GameObject:
   m_ObjectHideFlags: 0
@@ -7914,6 +8468,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1382648566164412814, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
   m_PrefabInstance: {fileID: 464819803}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &464819805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5987332885971693606, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
+  m_PrefabInstance: {fileID: 464819803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &464819806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464819805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 7
+--- !u!114 &464819807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464819805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Base_SD_01
+    (2)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!64 &468233676
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7996,6 +8593,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2483685999063698019, guid: 36510e737e626954986f2c5112be9091, type: 3}
   m_PrefabInstance: {fileID: 471405418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &471405420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743020621460257955, guid: 36510e737e626954986f2c5112be9091, type: 3}
+  m_PrefabInstance: {fileID: 471405418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &471405421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471405420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &471405422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471405420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_SD_01
+    (2)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &474513124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8555,6 +9231,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5561037946434667683, guid: 75f68a1f4dd36214383ec174a8d8bf67, type: 3}
   m_PrefabInstance: {fileID: 510298888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &510298890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5073047835860311577, guid: 75f68a1f4dd36214383ec174a8d8bf67, type: 3}
+  m_PrefabInstance: {fileID: 510298888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &510298891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510298890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &510298892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510298890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Bathroom-Furniture-Shower_Base_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &515929079
 GameObject:
   m_ObjectHideFlags: 0
@@ -8877,6 +9631,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7265477102981145203, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
   m_PrefabInstance: {fileID: 541259953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &541259955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6175574215640251783, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
+  m_PrefabInstance: {fileID: 541259953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &541259956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541259955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &541259957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541259955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Furniture-Shelf_Apt_01
+    (1)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &543330549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,6 +9816,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549830739}
+  - component: {fileID: 549830741}
+  - component: {fileID: 549830740}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -9006,7 +9841,6 @@ Transform:
   - {fileID: 37725003}
   - {fileID: 152594321}
   - {fileID: 159317217}
-  - {fileID: 1684473036}
   - {fileID: 130887977}
   - {fileID: 753203457}
   - {fileID: 1002923044}
@@ -9043,8 +9877,6 @@ Transform:
   - {fileID: 1806913794}
   - {fileID: 656568217}
   - {fileID: 663028117}
-  - {fileID: 1111967982}
-  - {fileID: 1701127947}
   - {fileID: 1443546546}
   - {fileID: 1867603672}
   - {fileID: 661659326}
@@ -9053,7 +9885,6 @@ Transform:
   - {fileID: 1338041642}
   - {fileID: 924723783}
   - {fileID: 137078951}
-  - {fileID: 212794012}
   - {fileID: 396228452}
   - {fileID: 273021437}
   - {fileID: 269652587}
@@ -9072,9 +9903,76 @@ Transform:
   - {fileID: 1623471503}
   - {fileID: 312614063}
   - {fileID: 835551171}
+  - {fileID: 1684473036}
+  - {fileID: 1111967982}
+  - {fileID: 1701127947}
+  - {fileID: 212794012}
   m_Father: {fileID: 1693473830}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &549830740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549830738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 0
+    points:
+    - frequency: 131.24744
+      data: 0
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 0
+--- !u!114 &549830741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549830738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Walls-0
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &550768906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10895,6 +11793,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2574771169908623621, guid: 22a931750861f724a854421dccfa17e0, type: 3}
   m_PrefabInstance: {fileID: 640005840}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &640005842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8044548732317020784, guid: 22a931750861f724a854421dccfa17e0, type: 3}
+  m_PrefabInstance: {fileID: 640005840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &640005843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640005842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &640005844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640005842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-Wall_Mirror_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &641601627
 GameObject:
   m_ObjectHideFlags: 0
@@ -11500,7 +12476,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.14}
-  m_SizeDelta: {x: 0.5, y: 0.003}
+  m_SizeDelta: {x: 0.5, y: 0.0075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662021716
 MonoBehaviour:
@@ -11616,6 +12592,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5820956380439161571, guid: f072b6d5974d6a14da67d1db1cd20b92, type: 3}
   m_PrefabInstance: {fileID: 662313094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &662313096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8286077048136229997, guid: f072b6d5974d6a14da67d1db1cd20b92, type: 3}
+  m_PrefabInstance: {fileID: 662313094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &662313097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662313096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &662313098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662313096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_Corner_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &663011634
 GameObject:
   m_ObjectHideFlags: 0
@@ -13394,6 +14448,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1382648566164412814, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
   m_PrefabInstance: {fileID: 753071956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &753071958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5987332885971693606, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
+  m_PrefabInstance: {fileID: 753071956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &753071959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753071958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 7
+--- !u!114 &753071960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753071958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Base_SD_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &753203456
 GameObject:
   m_ObjectHideFlags: 0
@@ -14299,6 +15395,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2483685999063698019, guid: 36510e737e626954986f2c5112be9091, type: 3}
   m_PrefabInstance: {fileID: 836593446}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &836593448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743020621460257955, guid: 36510e737e626954986f2c5112be9091, type: 3}
+  m_PrefabInstance: {fileID: 836593446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &836593449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836593448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &836593450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836593448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_SD_01
+    (3)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &837660267
 GameObject:
   m_ObjectHideFlags: 0
@@ -14525,6 +15700,99 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3553007978463355508, guid: 8f9e4da5668113a4da8b4efea4a9499f, type: 3}
+--- !u!1 &848601080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5580612955541943707, guid: c18b481f066a5da4b914f47a90e23ac4, type: 3}
+  m_PrefabInstance: {fileID: 501130090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &848601084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848601080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Walls-Int_Apt_01_Wall_04 (2)-Window
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &848601085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848601080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &848601086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848601080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Walls-Int_Apt_01_Wall_04 (2)-Window-0
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!65 &853363655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15625,6 +16893,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8564915951976741474, guid: 7b8d9613223ef1f448bbe8fc90d8a85d, type: 3}
   m_PrefabInstance: {fileID: 939125371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &939125373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5871847615224283292, guid: 7b8d9613223ef1f448bbe8fc90d8a85d, type: 3}
+  m_PrefabInstance: {fileID: 939125371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &939125374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939125373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.01
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.45
+    - frequency: 4000
+      data: 0.65
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.15
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.3
+    - frequency: 4000
+      data: 0.45
+  preset_: 4
+--- !u!114 &939125375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939125373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-Rug_Apt_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &940533052
 GameObject:
   m_ObjectHideFlags: 0
@@ -15866,6 +17212,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 974449009}
+  - component: {fileID: 974449011}
+  - component: {fileID: 974449010}
   m_Layer: 0
   m_Name: Floors
   m_TagString: Untagged
@@ -15937,6 +17285,79 @@ Transform:
   m_Father: {fileID: 1693473830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974449010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974449008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.15
+    - frequency: 250
+      data: 0.11
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.07
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.07
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.071
+    - frequency: 250
+      data: 0.025
+    - frequency: 500
+      data: 0.0158
+    - frequency: 1000
+      data: 0.0056
+    - frequency: 2000
+      data: 0.0035
+    - frequency: 4000
+      data: 0.0016
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 28
+--- !u!114 &974449011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974449008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Floors-0
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &976892022
 GameObject:
   m_ObjectHideFlags: 0
@@ -17464,6 +18885,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9062602307051458104, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
   m_PrefabInstance: {fileID: 1032552049}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032552051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4228638966643171970, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
+  m_PrefabInstance: {fileID: 1032552049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1032552052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032552051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.01
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.45
+    - frequency: 4000
+      data: 0.65
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.15
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.3
+    - frequency: 4000
+      data: 0.45
+  preset_: 4
+--- !u!114 &1032552053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032552051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-WelcomeMat_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1036553670
 GameObject:
   m_ObjectHideFlags: 0
@@ -18793,6 +20292,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1382648566164412814, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
   m_PrefabInstance: {fileID: 1091188316}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1091188318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5987332885971693606, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
+  m_PrefabInstance: {fileID: 1091188316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091188319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091188318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 7
+--- !u!114 &1091188320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091188318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Base_SD_01
+    (1)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &1097738676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19203,6 +20745,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5905695572330950812, guid: 1091ee0a141f2ba429668a6cc5a0f03e, type: 3}
   m_PrefabInstance: {fileID: 1106501683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1106501685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167177008488376570, guid: 1091ee0a141f2ba429668a6cc5a0f03e, type: 3}
+  m_PrefabInstance: {fileID: 1106501683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1106501686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106501685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &1106501687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106501685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Props-Monitor_Apt_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1111967981
 GameObject:
   m_ObjectHideFlags: 0
@@ -19235,7 +20855,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 549830739}
-  m_RootOrder: 41
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!65 &1111967983
 BoxCollider:
@@ -19364,6 +20984,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7265477102981145203, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
   m_PrefabInstance: {fileID: 1116533535}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116533537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6175574215640251783, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
+  m_PrefabInstance: {fileID: 1116533535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1116533538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116533537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1116533539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116533537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Living Room-Furniture-Shelf_Apt_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1124339770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1124339770, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -19720,6 +21418,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1053357380960435366, guid: 798cab9a237d184479fa2e6d3e55fb57, type: 3}
   m_PrefabInstance: {fileID: 1147305813}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1147305815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5877209137055616192, guid: 798cab9a237d184479fa2e6d3e55fb57, type: 3}
+  m_PrefabInstance: {fileID: 1147305813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1147305816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147305815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1147305817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147305815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Shelf_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1159270553
 GameObject:
   m_ObjectHideFlags: 0
@@ -20060,6 +21836,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1626998783868662017, guid: 452921da7fe17904da8c1d34c235dee4, type: 3}
   m_PrefabInstance: {fileID: 1175199569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175199571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1963118065990805654, guid: 452921da7fe17904da8c1d34c235dee4, type: 3}
+  m_PrefabInstance: {fileID: 1175199569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175199572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175199571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.02
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.25
+    - frequency: 250
+      data: 0.2
+    - frequency: 500
+      data: 0.17
+    - frequency: 1000
+      data: 0.089
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.0056
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.1
+  preset_: 24
+--- !u!114 &1175199573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175199571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Appliances-Stove_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &1184163763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20128,6 +21982,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2483685999063698019, guid: 36510e737e626954986f2c5112be9091, type: 3}
   m_PrefabInstance: {fileID: 1184163763}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1184163765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743020621460257955, guid: 36510e737e626954986f2c5112be9091, type: 3}
+  m_PrefabInstance: {fileID: 1184163763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184163766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184163765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1184163767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184163765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_SD_01
+    (1)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &1191210602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20774,6 +22707,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9055458756796538670, guid: 9e4d4910b774d1f48810a4fa933835c5, type: 3}
   m_PrefabInstance: {fileID: 1285344050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1285344052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5546436795134103488, guid: 9e4d4910b774d1f48810a4fa933835c5, type: 3}
+  m_PrefabInstance: {fileID: 1285344050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1285344053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285344052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points: []
+  transmission:
+    selection: 2147483647
+    points: []
+  scattering:
+    selection: 2147483647
+    points: []
+  preset_: 7
+--- !u!114 &1285344054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285344052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Base_Corner_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1286063910
 GameObject:
   m_ObjectHideFlags: 0
@@ -25093,6 +27068,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1569342577}
+  - component: {fileID: 1569342579}
+  - component: {fileID: 1569342578}
   m_Layer: 0
   m_Name: Doors Windows
   m_TagString: Untagged
@@ -25120,6 +27097,79 @@ Transform:
   m_Father: {fileID: 1693473830}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1569342578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569342576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1569342579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569342576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Doors Windows
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1587719834
 GameObject:
   m_ObjectHideFlags: 0
@@ -26494,7 +28544,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 549830739}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0.328, y: -180, z: 0}
 --- !u!65 &1684473037
 BoxCollider:
@@ -26730,7 +28780,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 549830739}
-  m_RootOrder: 42
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!65 &1701127948
 BoxCollider:
@@ -27140,6 +29190,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5308577353009317841, guid: d2d91ff190ebafa41b8fa852ad4c0f8c, type: 3}
   m_PrefabInstance: {fileID: 1723915230}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1723915232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3265179640249380063, guid: d2d91ff190ebafa41b8fa852ad4c0f8c, type: 3}
+  m_PrefabInstance: {fileID: 1723915230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1723915233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723915232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1723915234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723915232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Wall_DD_01
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &1724033995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27826,6 +29954,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1053357380960435366, guid: 798cab9a237d184479fa2e6d3e55fb57, type: 3}
   m_PrefabInstance: {fileID: 1769207715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1769207717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5877209137055616192, guid: 798cab9a237d184479fa2e6d3e55fb57, type: 3}
+  m_PrefabInstance: {fileID: 1769207715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1769207718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769207717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
+--- !u!114 &1769207719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769207717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Furniture and Props-Kitchen-Cabinets-Cabinet_Shelf_01
+    (1)
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1001 &1769557305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32893,6 +35100,8 @@ GameObject:
   - component: {fileID: 901520633708649100}
   - component: {fileID: 5142610691126610552}
   - component: {fileID: 672363514}
+  - component: {fileID: 5142610691126610553}
+  - component: {fileID: 5142610691126610554}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -35274,6 +37483,79 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5142610691126610553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009013295733272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Table
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &5142610691126610554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009013295733272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.42
+    - frequency: 250
+      data: 0.21
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.08
+    - frequency: 2000
+      data: 0.06
+    - frequency: 4000
+      data: 0.06
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.2
+    - frequency: 250
+      data: 0.125
+    - frequency: 500
+      data: 0.079
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.05
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.1
+    - frequency: 4000
+      data: 0.15
+  preset_: 26
 --- !u!4 &5161574159352375268
 Transform:
   m_ObjectHideFlags: 0
@@ -35562,6 +37844,84 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c18b481f066a5da4b914f47a90e23ac4, type: 3}
+--- !u!1 &5580612954740975479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5580612955541943707, guid: c18b481f066a5da4b914f47a90e23ac4, type: 3}
+  m_PrefabInstance: {fileID: 5580612954740975478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5580612954740975480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580612954740975479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &5580612954740975481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580612954740975479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Apartment-Walls-Int_Apt_01_Wall_04-Window
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &5587785411267934135
 GameObject:
   m_ObjectHideFlags: 0
@@ -35622,6 +37982,8 @@ GameObject:
   - component: {fileID: 7589277518892034480}
   - component: {fileID: 3557421763077978189}
   - component: {fileID: 1351178731}
+  - component: {fileID: 7970185448674280827}
+  - component: {fileID: 7970185448674280828}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -36116,6 +38478,8 @@ GameObject:
   - component: {fileID: 1027327083933896173}
   - component: {fileID: 966318314007429076}
   - component: {fileID: 840275937}
+  - component: {fileID: 6743167692134577289}
+  - component: {fileID: 6743167692134577290}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -36186,6 +38550,8 @@ GameObject:
   - component: {fileID: 2213561072415112658}
   - component: {fileID: 6756649726612344670}
   - component: {fileID: 4751300}
+  - component: {fileID: 6756649726612344671}
+  - component: {fileID: 6756649726612344672}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -36208,6 +38574,79 @@ Transform:
   m_Father: {fileID: 8688982062136518363}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6743167692134577289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6663884221276011923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Floor-0
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &6743167692134577290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6663884221276011923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 0
+    points:
+    - frequency: 125
+      data: 0.01
+    - frequency: 250
+      data: 0.01
+    - frequency: 500
+      data: 0.01
+    - frequency: 1000
+      data: 0.01
+    - frequency: 2000
+      data: 0.02
+    - frequency: 4000
+      data: 0.02
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.12
+    - frequency: 500
+      data: 0.14
+    - frequency: 1000
+      data: 0.16
+    - frequency: 2000
+      data: 0.18
+    - frequency: 4000
+      data: 0.2
+  preset_: 7
 --- !u!33 &6748599981152660582
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36258,6 +38697,69 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6756649726612344671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727635286718615797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Ceiling-0
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &6756649726612344672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727635286718615797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.1
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.02
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.25
+    - frequency: 250
+      data: 0.2
+    - frequency: 500
+      data: 0.17
+    - frequency: 1000
+      data: 0.089
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.0056
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.9
+  preset_: 0
 --- !u!23 &6805452059009422917
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36364,6 +38866,8 @@ GameObject:
   - component: {fileID: 7070734694219246202}
   - component: {fileID: 7847398890903713739}
   - component: {fileID: 853363655}
+  - component: {fileID: 7847398890903713740}
+  - component: {fileID: 7847398890903713741}
   m_Layer: 0
   m_Name: Garage door
   m_TagString: Untagged
@@ -36457,6 +38961,8 @@ GameObject:
   - component: {fileID: 738661346686864560}
   - component: {fileID: 1290704620836007533}
   - component: {fileID: 5178501815081761998}
+  - component: {fileID: 6953574955667378742}
+  - component: {fileID: 6953574955667378743}
   m_Layer: 0
   m_Name: Emissive window
   m_TagString: Untagged
@@ -36464,6 +38970,79 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &6953574955667378742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953574955667378741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Emissive window
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &6953574955667378743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953574955667378741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
 --- !u!23 &6987878167526870015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36909,6 +39488,8 @@ GameObject:
   - component: {fileID: 4652547583534023898}
   - component: {fileID: 1704171049352806164}
   - component: {fileID: 633085663104007868}
+  - component: {fileID: 7435834989694467622}
+  - component: {fileID: 7435834989694467621}
   m_Layer: 0
   m_Name: Carpet
   m_TagString: Untagged
@@ -36916,6 +39497,79 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &7435834989694467621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435834989694467620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.01
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.1
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.45
+    - frequency: 4000
+      data: 0.65
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.004
+    - frequency: 250
+      data: 0.0079
+    - frequency: 500
+      data: 0.0056
+    - frequency: 1000
+      data: 0.0016
+    - frequency: 2000
+      data: 0.0014
+    - frequency: 4000
+      data: 0.0005
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.1
+    - frequency: 250
+      data: 0.1
+    - frequency: 500
+      data: 0.15
+    - frequency: 1000
+      data: 0.2
+    - frequency: 2000
+      data: 0.3
+    - frequency: 4000
+      data: 0.45
+  preset_: 4
+--- !u!114 &7435834989694467622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435834989694467620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Carpet
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!33 &7490864078646562494
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36982,6 +39636,69 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7847398890903713740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850087488436047812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Garage door-0
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &7847398890903713741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850087488436047812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 4
+    points:
+    - frequency: 51.53679
+      data: 0.006944445
+    - frequency: 242.2718
+      data: 0.011141975
+    - frequency: 490.28293
+      data: 0.010000001
+    - frequency: 1023.0606
+      data: 0.013611111
+    - frequency: 1947.2603
+      data: 0.010000001
+    - frequency: 4000
+      data: 0.02
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.25
+    - frequency: 250
+      data: 0.2
+    - frequency: 500
+      data: 0.17
+    - frequency: 1000
+      data: 0.089
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.0056
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.9
+  preset_: 0
 --- !u!4 &7858193588159135361
 Transform:
   m_ObjectHideFlags: 0
@@ -37098,6 +39815,67 @@ Transform:
   m_Father: {fileID: 8688982062136518363}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7970185448674280827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692162261296381534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: MainScene/Garage-Walls-0
+  fileEnabled: 1
+  includeChildMeshes: 1
+--- !u!114 &7970185448674280828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692162261296381534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 5
+    points:
+    - frequency: 27.919348
+      data: 0.008919753
+    - frequency: 249.81215
+      data: 0.006049383
+    - frequency: 571.4785
+      data: 0.006049383
+    - frequency: 2070.3567
+      data: 0.006944445
+    - frequency: 8222.851
+      data: 0.006944445
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.25
+    - frequency: 250
+      data: 0.2
+    - frequency: 500
+      data: 0.17
+    - frequency: 1000
+      data: 0.089
+    - frequency: 2000
+      data: 0.089
+    - frequency: 4000
+      data: 0.0056
+  scattering:
+    selection: 0
+    points:
+    - frequency: 26.664864
+      data: 0.89
+  preset_: 0
 --- !u!23 &8056132891324439229
 MeshRenderer:
   m_ObjectHideFlags: 0

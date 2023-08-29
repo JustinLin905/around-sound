@@ -48,7 +48,6 @@ public class MusicControls : MonoBehaviour
         foreach(GameObject go in GameObject.FindGameObjectsWithTag("Queue Text")) 
         {
             queueTexts.AddRange(go.GetComponentsInChildren<TextMeshProUGUI>());
-            Debug.Log("Foundqueuetext");
         }
 
         // Add handheld  queue text to list, since it will be inactive at start and will not be found by the above

@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d762e9baecaf694b93d5cd6e4f19f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowPassFilter: {fileID: 137541569083351715}
+  highPassFilter: {fileID: -1646022436441261912}
   lowCutoff: 2000
   highCutoff: 20000
   cutoffSharpness: 3
@@ -88,7 +90,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1.5

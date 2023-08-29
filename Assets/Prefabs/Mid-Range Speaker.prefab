@@ -51,9 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d762e9baecaf694b93d5cd6e4f19f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowPassFilter: {fileID: 6543195134451127874}
+  highPassFilter: {fileID: -1155226070889071684}
   lowCutoff: 250
   highCutoff: 2000
-  cutoffSharpness: 3
+  cutoffSharpness: 1
   defaultLowCutoff: 250
   defaultHighCutoff: 2000
   defaultCutoffSharpness: 3
@@ -88,7 +90,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 1
-  SpatializePostEffects: 0
+  SpatializePostEffects: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1.5
@@ -205,7 +207,7 @@ AudioLowPassFilter:
   m_GameObject: {fileID: 1265651083546979984}
   m_Enabled: 1
   serializedVersion: 3
-  m_LowpassResonanceQ: 3
+  m_LowpassResonanceQ: 1
   lowpassLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -230,7 +232,7 @@ AudioHighPassFilter:
   m_GameObject: {fileID: 1265651083546979984}
   m_Enabled: 1
   m_CutoffFrequency: 250
-  m_HighpassResonanceQ: 3
+  m_HighpassResonanceQ: 1
 --- !u!1001 &1096487631117410048
 PrefabInstance:
   m_ObjectHideFlags: 0
