@@ -19,16 +19,69 @@ public class FrequencyFilter : MonoBehaviour
             return;
         }
 
+        // Gonna have to change to InChildren
         audioSource = GetComponent<AudioSource>();
 
-        // Add a low pass filter and set the cutoff frequency to 250 Hz
+        // Add a low & high pass filter
         lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        lowPassFilter.cutoffFrequency = highCutoff;
-        lowPassFilter.lowpassResonanceQ = cutoffSharpness; // Increase the sharpness of the filter
-
-        // Add a high pass filter and set the cutoff frequency to 60 Hz
         highPassFilter = gameObject.AddComponent<AudioHighPassFilter>();
+
+        UpdateFilters();
+    }
+
+    public void EditFrequency(int selectionIndex, bool down = false)
+    {
+        if (!filterEnabled)
+        {
+            return;
+        }
+
+        if (!down)
+        {
+            // Increase frequency
+            switch (selectionIndex)
+            {
+                case 0:
+                    lowCutoff += 5;
+                    break;
+                case 1:
+                    highCutoff += 5;
+                    break;
+                case 2:
+                    cutoffSharpness += 1;
+                    break;
+            }
+        }
+        else
+        {
+            // Decrease frequency
+            switch (selectionIndex)
+            {
+                case 0:
+                    lowCutoff -= 5;
+                    break;
+                case 1:
+                    highCutoff -= 5;
+                    break;
+                case 2:
+                    cutoffSharpness -= 1;
+                    if (cutoffSharpness < 1)
+                    {
+                        cutoffSharpness = 1;
+                    }
+                    break;
+            }
+        }
+
+        UpdateFilters();
+    }
+
+    private void UpdateFilters()
+    {
+        lowPassFilter.cutoffFrequency = highCutoff;
+        lowPassFilter.lowpassResonanceQ = cutoffSharpness;
+
         highPassFilter.cutoffFrequency = lowCutoff;
-        highPassFilter.highpassResonanceQ = cutoffSharpness; // Increase the sharpness of the filter
+        highPassFilter.highpassResonanceQ = cutoffSharpness;
     }
 }

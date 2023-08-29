@@ -183,6 +183,16 @@ public class EditMode : MonoBehaviour
         universalAudiosource.PlayOneShot(deleteSound);
     }
 
+    public GameObject GetSpeakerType()
+    {
+        return speakerTypes[speakerIndex];
+    }
+
+    public bool IsEditableSpeaker()
+    {
+        return speakerIndex != 0;
+    }
+
     IEnumerator SetTimeout()
     {
         timeout = true;

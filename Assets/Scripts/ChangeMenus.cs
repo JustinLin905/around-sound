@@ -9,6 +9,7 @@ public class ChangeMenus : MonoBehaviour
     public GameObject editMenu;
     public GameObject musicControls;
     public GameObject environmentMenu;
+    public GameObject editSpeakerMenu;
 
     private Animator anim;
 
@@ -16,12 +17,15 @@ public class ChangeMenus : MonoBehaviour
     private bool isAnimating = false;
     private bool menuHidden = false;
 
+    public EditMode editMode;
+
     private void Start()
     {
         mainMenu.SetActive(false);
         editMenu.SetActive(false);
         musicControls.SetActive(false);
         environmentMenu.SetActive(false);
+        editSpeakerMenu.SetActive(false);
 
         activeMenu = mainMenu;
     }
@@ -41,6 +45,9 @@ public class ChangeMenus : MonoBehaviour
             {
                 StartCoroutine(SetMenuActive(mainMenu, true));
             }
+            else if (editSpeakerMenu.activeSelf) {
+                StartCoroutine(SetMenuActive(editMenu));
+            }
             else
             {
                 StartCoroutine(SetMenuActive(mainMenu));
@@ -55,6 +62,11 @@ public class ChangeMenus : MonoBehaviour
         
         else if (OVRInput.GetDown(OVRInput.Button.Three) && mainMenu.activeSelf) {
             StartCoroutine(SetMenuActive(environmentMenu));
+        }
+
+        else if (OVRInput.GetDown(OVRInput.Button.One) && editMenu.activeSelf && editMode.IsEditableSpeaker())
+        {
+            StartCoroutine(SetMenuActive(editSpeakerMenu));
         }
     }
 
