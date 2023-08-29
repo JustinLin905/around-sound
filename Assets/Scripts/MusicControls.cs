@@ -299,7 +299,7 @@ public class MusicControls : MonoBehaviour
         queue = newQueue;
 
         // Set the default track
-        queue.Insert(0, new Song("One Kiss (Calvis Harris)", clip));
+        queue.Insert(0, new Song("In Dreamland (Default Song)", clip));
         currentSong = queue[currentSongIndex];
 
         SetQueueText();

@@ -61,7 +61,7 @@ public class LoadMusic : MonoBehaviour
     private IEnumerator LoadAllAudioFiles()
     {
         Debug.Log("LOADING AUDIO FILES FROM: " + folderPath);
-        string[] fileExtensions = { "*.wav", "*.ogg" };
+        string[] fileExtensions = { "*.wav", "*.ogg", "*.mp3" };
 
         foreach (string extension in fileExtensions)
         {
@@ -110,6 +110,8 @@ public class LoadMusic : MonoBehaviour
                 return AudioType.WAV;
             case ".ogg":
                 return AudioType.OGGVORBIS;
+            case ".mp3":
+                return AudioType.MPEG;
             default:
                 Debug.LogError("Unsupported audio type: " + extension);
                 return AudioType.UNKNOWN;
