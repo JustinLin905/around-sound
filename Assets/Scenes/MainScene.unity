@@ -29508,6 +29508,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 968292777417071141, guid: 56a93cd127ed0184982c13ec0a61cfa5, type: 3}
   m_PrefabInstance: {fileID: 1724033995}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1724033997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8890821166399119553, guid: 56a93cd127ed0184982c13ec0a61cfa5, type: 3}
+  m_PrefabInstance: {fileID: 1724033995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1724034003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724033997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fef2cb49a5b4b46a3d1cbeaec4c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.35
+    - frequency: 250
+      data: 0.25
+    - frequency: 500
+      data: 0.18
+    - frequency: 1000
+      data: 0.12
+    - frequency: 2000
+      data: 0.07
+    - frequency: 4000
+      data: 0.05
+  transmission:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.125
+    - frequency: 250
+      data: 0.089
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.028
+    - frequency: 2000
+      data: 0.022
+    - frequency: 4000
+      data: 0.079
+  scattering:
+    selection: 2147483647
+    points:
+    - frequency: 125
+      data: 0.05
+    - frequency: 250
+      data: 0.05
+    - frequency: 500
+      data: 0.05
+    - frequency: 1000
+      data: 0.05
+    - frequency: 2000
+      data: 0.05
+    - frequency: 4000
+      data: 0.05
+  preset_: 14
+--- !u!114 &1724034004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724033997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePathRelative: 
+  fileEnabled: 1
+  includeChildMeshes: 1
 --- !u!1 &1736918030
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class MusicControls : MonoBehaviour
         UpdateMetadata();
 
         // Always check if the current song is over
-        if (activeAudiosource != null && activeAudiosource.time >= activeAudiosource.clip.length)
+        if (activeAudiosource && activeAudiosource.time >= activeAudiosource.clip.length - 0.05f)
         {
             SkipAudio();
         }
@@ -282,6 +282,11 @@ public class MusicControls : MonoBehaviour
                     }
                     
                     StartCoroutine(PushButtonVisual(seekBackButton));
+                }
+
+                else if (audioSource.time + 10f > audioSource.clip.length)
+                {
+                    audioSource.time = audioSource.clip.length;
                 }
 
                 else

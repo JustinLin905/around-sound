@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d762e9baecaf694b93d5cd6e4f19f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowPassFilter: {fileID: 0}
+  highPassFilter: {fileID: 0}
   lowCutoff: 0
   highCutoff: 0
   cutoffSharpness: 3
@@ -79,7 +81,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 452cab5cd4cc31a4bbda065fe1729e0d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
