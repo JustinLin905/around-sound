@@ -6,7 +6,9 @@
 
 "**ar**ound sound" is a fully immersive and customizable spatial music player. Load in your own .mp3 files, put on your headset, and jam out like never before. In this virtual reality playground, you can create the soundsystem of dreams by using an unlimited amount of speakers, which are all simulated to have accurate real-time directions, sound profiles, and reflections.
 
-Around Sound requires a Meta Quest headset and a VR-Ready Windows computer to play. Connect your headset with 2 Touch Controllers to your PC in Link Mode and launch the .exe app. Dedicated headphones or earbuds are recommended while listening! You can find the app download on [Itch.io.](https://justinlin905.itch.io/around-sound)
+If you want to try the app, [the download is free on Itch.io](https://justinlin905.itch.io/around-sound). Around Sound requires a Meta Quest headset and a VR-Ready Windows computer to play. Connect your headset with 2 Touch Controllers to your PC in Link Mode and launch the .exe app. Dedicated headphones or earbuds are recommended while listening!
+
+If you want to check out the code, look at the files above and go to `Assets > Scripts`.
 
 *Built with Unity 2022 and Oculus VR SDK*.
 
