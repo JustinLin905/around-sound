@@ -96,6 +96,8 @@ public class MusicControls : MonoBehaviour
     void PlayPause()
     {
         // Find all GameObjects with the tag "Speakers"
+        // Repeatedly using FindGameObjectsWithTag throughout this file is pretty compute intensive.
+        // Next step is to manage a List of speakers data structure and use that instead
         GameObject[] speakers = GameObject.FindGameObjectsWithTag("Speakers");
 
         if (speakers.Length == 0)
