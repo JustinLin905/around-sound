@@ -44,12 +44,6 @@ public class LoadMusic : MonoBehaviour
         StartCoroutine(InitializeAudioFiles());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator InitializeAudioFiles()
     {
         yield return LoadAllAudioFiles();
